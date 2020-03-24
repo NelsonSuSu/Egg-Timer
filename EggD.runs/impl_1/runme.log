@@ -494,3 +494,118 @@ write_bitstream completed successfully
 write_bitstream: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1581.566 ; gain = 363.535
 INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file EggD.hwdef
 INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 18:23:35 2020...
+
+*** Running vivado
+    with args -log EggD.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source EggD.tcl -notrace
+
+
+****** Vivado v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source EggD.tcl -notrace
+Command: open_checkpoint EggD_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 210.113 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.3
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/impl_1/.Xil/Vivado-1536-Nelson/dcp/EggD_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1014.047 ; gain = 513.816
+Finished Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/impl_1/.Xil/Vivado-1536-Nelson/dcp/EggD_early.xdc]
+Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/impl_1/.Xil/Vivado-1536-Nelson/dcp/EggD.xdc]
+Finished Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/impl_1/.Xil/Vivado-1536-Nelson/dcp/EggD.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.193 . Memory (MB): peak = 1014.121 ; gain = 0.004
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1014.121 ; gain = 0.004
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.3 (64-bit) build 1682563
+open_checkpoint: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1014.121 ; gain = 804.008
+Command: write_bitstream -force -no_partial_bitfile EggD.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC 23-20] Rule violation (IOSR-1) IOB set reset sharing - IO Minutes connects to flops which have these SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0], INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+WARNING: [DRC 23-20] Rule violation (IOSR-1) IOB set reset sharing - IO Seconds connects to flops which have these SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0], INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_P_0 is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/min_reg[2]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/min_reg[2]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/min_reg[3]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/min_reg[3]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/min_reg[4]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/min_reg[4]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/min_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_clk is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec[5]_C_i_2__0/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec[5]_C_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_reg[1]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec_reg[1]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_reg[2]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec_reg[2]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_reg[3]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec_reg[3]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_P is a gated clock net sourced by a combinational pin INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_LDC_i_1/O, cell INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net INPUT_sec_reg[5]_i_2_n_0 is a gated clock net sourced by a combinational pin INPUT_sec_reg[5]_i_2/O, cell INPUT_sec_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[0]_LDC_i_1__0/O, cell RUN_COUNT_TIME/min_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[0]_P_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[0]_LDC_i_1/O, cell RUN_COUNT_TIME/min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[1]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[1]_LDC_i_1__0/O, cell RUN_COUNT_TIME/min_reg[1]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[2]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[2]_LDC_i_1__0/O, cell RUN_COUNT_TIME/min_reg[2]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[3]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[3]_LDC_i_1__0/O, cell RUN_COUNT_TIME/min_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[4]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[4]_LDC_i_1__0/O, cell RUN_COUNT_TIME/min_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/min_reg[5]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/min_reg[5]_LDC_i_1__0/O, cell RUN_COUNT_TIME/min_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/sec_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/sec_reg[0]_LDC_i_1__0/O, cell RUN_COUNT_TIME/sec_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/sec_reg[1]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/sec_reg[1]_LDC_i_1__0/O, cell RUN_COUNT_TIME/sec_reg[1]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/sec_reg[2]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/sec_reg[2]_LDC_i_1__0/O, cell RUN_COUNT_TIME/sec_reg[2]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/sec_reg[3]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/sec_reg[3]_LDC_i_1__0/O, cell RUN_COUNT_TIME/sec_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/sec_reg[4]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/sec_reg[4]_LDC_i_1__0/O, cell RUN_COUNT_TIME/sec_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net RUN_COUNT_TIME/sec_reg[5]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RUN_COUNT_TIME/sec_reg[5]_LDC_i_1__0/O, cell RUN_COUNT_TIME/sec_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net SEG_MGMT/DIV_MIN/one_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin SEG_MGMT/DIV_MIN/one_reg[3]_i_2/O, cell SEG_MGMT/DIV_MIN/one_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net SEG_MGMT/DIV_SEC/one_reg[3]_i_2__0_n_0 is a gated clock net sourced by a combinational pin SEG_MGMT/DIV_SEC/one_reg[3]_i_2__0/O, cell SEG_MGMT/DIV_SEC/one_reg[3]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net SET_COOK_TIME/debounce_sec/CLK is a gated clock net sourced by a combinational pin SET_COOK_TIME/debounce_sec/min[5]_i_3/O, cell SET_COOK_TIME/debounce_sec/min[5]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PLHOLDVIO-2) Non-Optimal connections which could lead to hold violations - A LUT INCREMENT_COUNT_TIME/debounce_sec/sec[5]_C_i_2__0 is driving clock pin of 24 cells. This could lead to large hold time violations. First few involved cells are:
+    INCREMENT_COUNT_TIME/min_reg[0]_C {FDCE}
+    INCREMENT_COUNT_TIME/min_reg[0]_P {FDPE}
+    INCREMENT_COUNT_TIME/min_reg[1]_C {FDCE}
+    INCREMENT_COUNT_TIME/min_reg[4]_P {FDPE}
+    INCREMENT_COUNT_TIME/min_reg[1]_P {FDPE}
+
+WARNING: [DRC 23-20] Rule violation (PLHOLDVIO-2) Non-Optimal connections which could lead to hold violations - A LUT SET_COOK_TIME/debounce_sec/min[5]_i_3 is driving clock pin of 12 cells. This could lead to large hold time violations. First few involved cells are:
+    SET_COOK_TIME/min_reg[0] {FDRE}
+    SET_COOK_TIME/min_reg[1] {FDRE}
+    SET_COOK_TIME/min_reg[2] {FDRE}
+    SET_COOK_TIME/min_reg[3] {FDRE}
+    SET_COOK_TIME/min_reg[4] {FDRE}
+
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 34 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./EggD.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+16 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1407.926 ; gain = 393.805
+INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file EggD.hwdef
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 18:31:58 2020...
