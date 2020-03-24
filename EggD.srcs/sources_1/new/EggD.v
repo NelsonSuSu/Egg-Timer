@@ -28,7 +28,7 @@ module EggD(
     input Start,
     input Minutes,
     input Seconds,
-    output TimerOn,
+    output reg TimerOn,
     output TimerEnabled,
     output [3:0] an,
     output [6:0] seg
@@ -44,7 +44,7 @@ module EggD(
     HalfCLK clk1_2hz(.clk(CLK1HZ), .reset(reset), .clk_out(CLK1_2HZ));
     
     //FSM assignment
-    always @(state) begin
+    always @(state or CookTime or TimerEnable) begin
         case(state)
             SetCookTime: begin
                 if (CookTime) nxt_state <= SetCookTime;
@@ -82,43 +82,91 @@ module EggD(
     wire [5:0] INCREMENT_min, INCREMENT_sec;
     reg [5:0] INPUT_min, INPUT_sec;
     
-    //FSM Modules
-    set_cook_time SET_COOK_TIME(.clk(CLK5MHZ), .minutes(Minutes), .seconds(Seconds), 
-        .state(state), .reset(reset), .min(COOK_min), .sec(COOK_sec));
+    //FSM Modules   
+//    set_cook_time SET_COOK_TIME(.clk(CLK5MHZ), .minutes(Minutes & state == SetCookTime), .seconds(Seconds & state == SetCookTime), 
+//        .state(state), .reset(reset), .min(COOK_min), .sec(COOK_sec));
     
-    run_count_time RUN_COUNT_TIME(.clk(CLK1HZ), .state(state), .reset(reset), .count_sec(INPUT_sec), .count_min(INPUT_min),
-        .min(RUN_min), .sec(RUN_sec));
+//    run_count_time RUN_COUNT_TIME(.clk(CLK1HZ), .state(state), .reset(reset), .count_sec(INPUT_sec), .count_min(INPUT_min),
+//        .min(RUN_min), .sec(RUN_sec));
     
-    increment_count_time INCREMENT_COUNT_TIME(.clk(CLK1HZ), .minutes(Minutes), .seconds(Seconds), .state(state),
-        .reset(reset), .cur_min(INPUT_min), .cur_sec(INPUT_sec), .min(INCREMENT_min), .sec(INCREMENT_sec));
+//    increment_count_time INCREMENT_COUNT_TIME(.clk(CLK1HZ), .minutes(Minutes & state == IncrementCountTime), .seconds(Seconds & state == IncrementCountTime), .state(state),
+//        .reset(reset), .cur_min(INPUT_min), .cur_sec(INPUT_sec), .min(INCREMENT_min), .sec(INCREMENT_sec));
     
+//    show_count_time SHOW_COUNT_TIME(.reset(reset), .count_sec(INPUT_sec), .count_min(INPUT_min), .sec(COUNT_sec), .min(COUNT_min));
+        
+//    //Counter Value Logic
+    
+//    always @(state) begin
+//        if (state == SetCookTime) begin
+//            INPUT_min <= COOK_min;
+//            INPUT_sec <= COOK_sec;
+//        end else if (state == RunCountTime) begin
+//            INPUT_min <= RUN_min;
+//            INPUT_sec <= RUN_sec;
+//        end else if (state == IncrementCountTime) begin
+//            INPUT_min <= INCREMENT_min;
+//            INPUT_sec <= INCREMENT_sec;
+//        end else begin
+//            INPUT_min <= COUNT_min;
+//            INPUT_sec <= COUNT_sec;
+//        end
+//    end 
+    set_cook_time SET_COOK_TIME(.clk(CLK5MHZ), .minutes(Minutes), .seconds(Seconds), .state(state), .reset(reset), .min(COOK_min), .sec(COOK_sec));
+    run_count_time RUN_COUNT_TIME(.clk(CLK1HZ), .state(state), .reset(reset), .count_sec(COUNT_sec), .count_min(COUNT_min), .min(RUN_min), .sec(RUN_sec));
+    increment_count_time INCREMENT_COUNT_TIME(.clk(CLK1HZ), .minutes(Minutes), .seconds(Seconds), .state(state), .reset(reset), .cur_min(RUN_min), .cur_sec(RUN_sec),
+        .min(INCREMENT_min), .sec(INCREMENT_sec));
     show_count_time SHOW_COUNT_TIME(.reset(reset), .count_sec(INPUT_sec), .count_min(INPUT_min), .sec(COUNT_sec), .min(COUNT_min));
     
-    
-    //Counter Value Logic
+    //Counter Time Loop Correction 
     always @(state) begin
         if (state == SetCookTime) begin
-            INPUT_min <= COOK_min;
             INPUT_sec <= COOK_sec;
-        end else if (state == RunCountTime) begin
-            INPUT_min <= RUN_min;
-            INPUT_sec <= RUN_sec;
+            INPUT_min <= COOK_min;
         end else if (state == IncrementCountTime) begin
-            INPUT_min <= INCREMENT_min;
             INPUT_sec <= INCREMENT_sec;
-        end else begin
-            INPUT_min <= COUNT_min;
-            INPUT_sec <= COUNT_sec;
+            INPUT_min <= INCREMENT_min;
         end
     end
-    
+
     //TimerEnabled Logic
     assign TimerEnabled = TimerEnable;
     
     //TimerOn Logic
-    assign TimerOn = (COUNT_min != 2'd00 | COUNT_sec != 2'd00) & TimerEnable & CLK1HZ; 
+    always @(TimerEnable) begin
+        if (INPUT_min == 0 & INPUT_sec == 0)
+            TimerOn <= 0;
+        else
+            TimerOn <= CLK1HZ & TimerEnable;
+    end
     
-    //MUX logic
-    seg_mgmt SEG_MGMT(.clk(CLK1_2HZ), .mins(INPUT_min), .secs(INPUT_sec), .an(an), .seg(seg));
+    reg [5:0] out_min, out_sec;
+    //Output Logic
+    always @(state) begin
+        case(state)
+            SetCookTime: begin
+                out_min <= COOK_min;
+                out_sec <= COOK_sec;
+            end 
+            ShowCountTime: begin
+                out_min <= COUNT_min;
+                out_min <= COUNT_sec;
+            end 
+            RunCountTime: begin
+                out_min <= RUN_min;
+                out_min <= RUN_sec;
+            end 
+            IncrementCountTime: begin
+                out_min <= INCREMENT_min;
+                out_sec <= INCREMENT_sec;
+            end
+        endcase
+    end
+    
+    wire [3:0] mgmt_an;
+    wire [6:0] mgmt_seg;
+    //MUX Logic
+    seg_mgmt SEG_MGMT(.clk(CLK1_2HZ), .mins(INPUT_min), .secs(INPUT_sec), .an(mgmt_an), .seg(mgmt_seg));
+    assign an = mgmt_an;
+    assign seg = mgmt_seg;
     
 endmodule

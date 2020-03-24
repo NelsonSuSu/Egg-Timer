@@ -42,11 +42,8 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -56,20 +53,21 @@ set rc [catch {
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.cache/wt [current_project]
-  set_property parent.project_path C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.xpr [current_project]
-  set_property ip_output_repo C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.cache/wt [current_project]
+  set_property parent.project_path C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.xpr [current_project]
+  set_property ip_output_repo C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/EggD.dcp
-  add_files -quiet c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
-  set_property netlist_only true [get_files c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
-  read_xdc -mode out_of_context -ref clk_wiz_0 -cells inst c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
-  set_property processing_order EARLY [get_files c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
-  read_xdc -prop_thru_buffers -ref clk_wiz_0 -cells inst c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc
-  set_property processing_order EARLY [get_files c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-  read_xdc -ref clk_wiz_0 -cells inst c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc
-  set_property processing_order EARLY [get_files c:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+  add_files -quiet C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/EggD.dcp
+  add_files -quiet c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
+  set_property netlist_only true [get_files c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
+  read_xdc -mode out_of_context -ref clk_wiz_0 -cells inst c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
+  set_property processing_order EARLY [get_files c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+  read_xdc -prop_thru_buffers -ref clk_wiz_0 -cells inst c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+  read_xdc -ref clk_wiz_0 -cells inst c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+  read_xdc C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc
   link_design -top EggD -part xc7a100tcsg324-1
   write_hwdef -file EggD.hwdef
   close_msg_db -file init_design.pb
@@ -139,6 +137,25 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  catch { write_mem_info -force EggD.mmi }
+  write_bitstream -force -no_partial_bitfile EggD.bit 
+  catch { write_sysdef -hwdef EggD.hwdef -bitfile EggD.bit -meminfo EggD.mmi -file EggD.sysdef }
+  catch {write_debug_probes -quiet -force debug_nets}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

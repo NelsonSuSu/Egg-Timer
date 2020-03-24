@@ -2,12 +2,12 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Mar 24 00:34:53 2020
-# Process ID: 18036
-# Current directory: C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1
+# Start of session at: Tue Mar 24 18:19:51 2020
+# Process ID: 15584
+# Current directory: C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1
 # Command line: vivado.exe -log EggD.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source EggD.tcl
-# Log file: C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/EggD.vds
-# Journal file: C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1\vivado.jou
+# Log file: C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/EggD.vds
+# Journal file: C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source EggD.tcl -notrace
 Command: synth_design -top EggD -part xc7a100tcsg324-1
@@ -15,80 +15,59 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16632 
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:35]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:38]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:41]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:44]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:47]
+INFO: Helper process launched with PID 4520 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 319.137 ; gain = 109.703
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 308.645 ; gain = 98.543
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'EggD' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
+INFO: [Synth 8-638] synthesizing module 'EggD' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:23]
 	Parameter SetCookTime bound to: 0 - type: integer 
 	Parameter ShowCountTime bound to: 1 - type: integer 
 	Parameter RunCountTime bound to: 2 - type: integer 
 	Parameter IncrementCountTime bound to: 3 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/.Xil/Vivado-18036-Nelson/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/.Xil/Vivado-18036-Nelson/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'MHZtoHZ' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/MHZtoHZ.v:23]
-INFO: [Synth 8-256] done synthesizing module 'MHZtoHZ' (2#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/MHZtoHZ.v:23]
-INFO: [Synth 8-638] synthesizing module 'HalfCLK' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/HalfCLK.v:23]
-INFO: [Synth 8-256] done synthesizing module 'HalfCLK' (3#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/HalfCLK.v:23]
-WARNING: [Synth 8-567] referenced signal 'CookTime' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:47]
-WARNING: [Synth 8-567] referenced signal 'TimerEnable' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:47]
-WARNING: [Synth 8-567] referenced signal 'Start' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:47]
-INFO: [Synth 8-638] synthesizing module 'set_cook_time' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/set_cook_time.v:23]
-INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/debouncer.v:23]
-INFO: [Synth 8-638] synthesizing module 'slow_clk' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:23]
-INFO: [Synth 8-256] done synthesizing module 'slow_clk' (4#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:23]
-INFO: [Synth 8-256] done synthesizing module 'debouncer' (5#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/debouncer.v:23]
-INFO: [Synth 8-256] done synthesizing module 'set_cook_time' (6#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/set_cook_time.v:23]
-INFO: [Synth 8-638] synthesizing module 'run_count_time' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/run_count_time.v:23]
-INFO: [Synth 8-256] done synthesizing module 'run_count_time' (7#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/run_count_time.v:23]
-INFO: [Synth 8-638] synthesizing module 'increment_count_time' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/increment_count_time.v:23]
-INFO: [Synth 8-256] done synthesizing module 'increment_count_time' (8#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/increment_count_time.v:23]
-WARNING: [Synth 8-689] width (6) of port connection 'cur_min' does not match port width (1) of module 'increment_count_time' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:92]
-WARNING: [Synth 8-689] width (6) of port connection 'cur_sec' does not match port width (1) of module 'increment_count_time' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:92]
-INFO: [Synth 8-638] synthesizing module 'show_count_time' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/show_count_time.v:23]
-WARNING: [Synth 8-567] referenced signal 'count_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/show_count_time.v:31]
-WARNING: [Synth 8-567] referenced signal 'count_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/show_count_time.v:31]
-INFO: [Synth 8-256] done synthesizing module 'show_count_time' (9#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/show_count_time.v:23]
-WARNING: [Synth 8-567] referenced signal 'COOK_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'COOK_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'RUN_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'RUN_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'INCREMENT_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'INCREMENT_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'COUNT_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-WARNING: [Synth 8-567] referenced signal 'COUNT_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:98]
-INFO: [Synth 8-638] synthesizing module 'seg_mgmt' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:23]
-INFO: [Synth 8-638] synthesizing module 'div59' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:23]
-INFO: [Synth 8-256] done synthesizing module 'div59' (10#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'double' does not match port width (6) of module 'div59' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:33]
-WARNING: [Synth 8-689] width (1) of port connection 'double' does not match port width (6) of module 'div59' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:34]
-INFO: [Synth 8-638] synthesizing module 'bcdto7segment' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/bcdto7segment.v:23]
-INFO: [Synth 8-256] done synthesizing module 'bcdto7segment' (11#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/bcdto7segment.v:23]
-WARNING: [Synth 8-689] width (3) of port connection 'x' does not match port width (4) of module 'bcdto7segment' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:38]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:46]
-WARNING: [Synth 8-3848] Net output_min in module/entity seg_mgmt does not have driver. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:33]
-WARNING: [Synth 8-3848] Net output_sec in module/entity seg_mgmt does not have driver. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:34]
-INFO: [Synth 8-256] done synthesizing module 'seg_mgmt' (12#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:23]
-INFO: [Synth 8-256] done synthesizing module 'EggD' (13#1) [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port mins[5]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port mins[4]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port mins[3]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port mins[2]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port mins[1]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port mins[0]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port secs[5]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port secs[4]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port secs[3]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port secs[2]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port secs[1]
-WARNING: [Synth 8-3331] design seg_mgmt has unconnected port secs[0]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/.Xil/Vivado-15584-Nelson/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/.Xil/Vivado-15584-Nelson/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'MHZtoHZ' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/MHZtoHZ.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MHZtoHZ' (2#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/MHZtoHZ.v:23]
+INFO: [Synth 8-638] synthesizing module 'HalfCLK' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/HalfCLK.v:23]
+INFO: [Synth 8-256] done synthesizing module 'HalfCLK' (3#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/HalfCLK.v:23]
+WARNING: [Synth 8-567] referenced signal 'Start' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:47]
+INFO: [Synth 8-638] synthesizing module 'set_cook_time' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/set_cook_time.v:23]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-638] synthesizing module 'slow_clk' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/slow_clk.v:23]
+INFO: [Synth 8-256] done synthesizing module 'slow_clk' (4#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/slow_clk.v:23]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (5#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'set_cook_time' (6#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/set_cook_time.v:23]
+INFO: [Synth 8-638] synthesizing module 'run_count_time' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/run_count_time.v:23]
+INFO: [Synth 8-256] done synthesizing module 'run_count_time' (7#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/run_count_time.v:23]
+INFO: [Synth 8-638] synthesizing module 'increment_count_time' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/increment_count_time.v:23]
+INFO: [Synth 8-256] done synthesizing module 'increment_count_time' (8#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/increment_count_time.v:23]
+INFO: [Synth 8-638] synthesizing module 'show_count_time' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/show_count_time.v:23]
+INFO: [Synth 8-256] done synthesizing module 'show_count_time' (9#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/show_count_time.v:23]
+WARNING: [Synth 8-567] referenced signal 'COOK_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:121]
+WARNING: [Synth 8-567] referenced signal 'COOK_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:121]
+WARNING: [Synth 8-567] referenced signal 'INCREMENT_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:121]
+WARNING: [Synth 8-567] referenced signal 'INCREMENT_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:121]
+WARNING: [Synth 8-567] referenced signal 'INPUT_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:135]
+WARNING: [Synth 8-567] referenced signal 'INPUT_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:135]
+WARNING: [Synth 8-567] referenced signal 'CLK1HZ' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:135]
+WARNING: [Synth 8-567] referenced signal 'COOK_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'COOK_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'COUNT_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'COUNT_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'RUN_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'RUN_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'INCREMENT_min' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+WARNING: [Synth 8-567] referenced signal 'INCREMENT_sec' should be on the sensitivity list [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:144]
+INFO: [Synth 8-638] synthesizing module 'seg_mgmt' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/seg_mgmt.v:23]
+INFO: [Synth 8-638] synthesizing module 'div59' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/div59.v:23]
+INFO: [Synth 8-256] done synthesizing module 'div59' (10#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/div59.v:23]
+INFO: [Synth 8-638] synthesizing module 'bcdto7segment' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/bcdto7segment.v:23]
+INFO: [Synth 8-256] done synthesizing module 'bcdto7segment' (11#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/bcdto7segment.v:23]
+WARNING: [Synth 8-689] width (3) of port connection 'x' does not match port width (4) of module 'bcdto7segment' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/seg_mgmt.v:38]
+INFO: [Synth 8-256] done synthesizing module 'seg_mgmt' (12#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/seg_mgmt.v:23]
+INFO: [Synth 8-256] done synthesizing module 'EggD' (13#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 339.734 ; gain = 130.301
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 345.941 ; gain = 135.840
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -97,56 +76,58 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin DIV_MIN:double[0] to constant 0 [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:33]
-WARNING: [Synth 8-3295] tying undriven pin DIV_SEC:double[0] to constant 0 [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/seg_mgmt.v:34]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 339.734 ; gain = 130.301
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 345.941 ; gain = 135.840
 ---------------------------------------------------------------------------------
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk5mhz' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:42]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk5mhz' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:42]
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/.Xil/Vivado-18036-Nelson/dcp/clk_wiz_0_in_context.xdc] for cell 'clk5mhz'
-Finished Parsing XDC File [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/.Xil/Vivado-18036-Nelson/dcp/clk_wiz_0_in_context.xdc] for cell 'clk5mhz'
+Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/.Xil/Vivado-15584-Nelson/dcp/clk_wiz_0_in_context.xdc] for cell 'clk5mhz'
+Finished Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/.Xil/Vivado-15584-Nelson/dcp/clk_wiz_0_in_context.xdc] for cell 'clk5mhz'
+Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/EggD_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/EggD_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 657.391 ; gain = 0.004
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 661.203 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 661.203 ; gain = 451.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 661.203 ; gain = 451.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/.Xil/Vivado-18036-Nelson/dcp/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/.Xil/Vivado-18036-Nelson/dcp/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/.Xil/Vivado-15584-Nelson/dcp/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/.Xil/Vivado-15584-Nelson/dcp/clk_wiz_0_in_context.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 661.203 ; gain = 451.102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "min" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "sec" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "min" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'one_reg' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:32]
-WARNING: [Synth 8-327] inferring latch for variable 'ten_reg' [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/div59.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'one_reg' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/div59.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'ten_reg' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/div59.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'INPUT_sec_reg' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'INPUT_min_reg' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.srcs/sources_1/new/EggD.v:118]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 661.203 ; gain = 451.102
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'SEG_MGMT/DIV_MIN' (div59) to 'SEG_MGMT/DIV_SEC'
-INFO: [Synth 8-223] decloning instance 'SEG_MGMT/BCD_MIN_ONE' (bcdto7segment) to 'SEG_MGMT/BCD_SEC_ONE'
-INFO: [Synth 8-223] decloning instance 'SEG_MGMT/BCD_MIN_ONE' (bcdto7segment) to 'SEG_MGMT/BCD_SEC_TEN'
+INFO: [Synth 8-223] decloning instance 'SEG_MGMT/BCD_SEC_ONE' (bcdto7segment) to 'SEG_MGMT/BCD_SEC_TEN'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -160,30 +141,26 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 4     
 	   2 Input      6 Bit       Adders := 6     
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 10    
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 4     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 6     
 	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 14    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 4     
 	   4 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 42    
-	   4 Input      6 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 41    
 	   4 Input      4 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 2     
 	   3 Input      2 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   6 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -196,10 +173,10 @@ Detailed RTL Component Info :
 +---Registers : 
 	                2 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 2     
 	   3 Input      2 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 Module MHZtoHZ 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -256,25 +233,21 @@ Detailed RTL Component Info :
 Module div59 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
 +---Muxes : 
-	   6 Input      4 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
 Module seg_mgmt 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -298,35 +271,11 @@ INFO: [Synth 8-5545] ROM "INCREMENT_COUNT_TIME/debounce_min/SLOW_CLK/counter" wo
 INFO: [Synth 8-5545] ROM "INCREMENT_COUNT_TIME/debounce_min/SLOW_CLK/slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3917] design EggD has port an[3] driven by constant 0
-WARNING: [Synth 8-3917] design EggD has port an[2] driven by constant 0
-WARNING: [Synth 8-3917] design EggD has port an[1] driven by constant 0
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/ten_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/ten_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/ten_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/one_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/one_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/one_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/DIV_MIN/one_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SEG_MGMT/seg_reg[0] )
-INFO: [Synth 8-3886] merging instance 'SEG_MGMT/seg_reg[1]' (FDE) to 'SEG_MGMT/seg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SEG_MGMT/seg_reg[2]' (FDE) to 'SEG_MGMT/seg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SEG_MGMT/seg_reg[3]' (FDE) to 'SEG_MGMT/seg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SEG_MGMT/seg_reg[4]' (FDE) to 'SEG_MGMT/seg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SEG_MGMT/seg_reg[5]' (FDE) to 'SEG_MGMT/seg_reg[6]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SEG_MGMT/seg_reg[6] )
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/one_reg[3]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/one_reg[2]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/one_reg[1]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/one_reg[0]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/ten_reg[2]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/ten_reg[1]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_MIN/ten_reg[0]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/seg_reg[6]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/seg_reg[0]) is unused and will be removed from module EggD.
-WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/counter_reg[2]) is unused and will be removed from module EggD.
+WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_SEC/ten_reg[2]) is unused and will be removed from module EggD.
+WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_SEC/ten_reg[1]) is unused and will be removed from module EggD.
+WARNING: [Synth 8-3332] Sequential element (SEG_MGMT/DIV_SEC/ten_reg[0]) is unused and will be removed from module EggD.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 661.203 ; gain = 451.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -343,162 +292,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk5mhz/clk_out1' to pin 'clk5mhz/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 661.203 ; gain = 451.102
 ---------------------------------------------------------------------------------
-Found timing loop:
-     0: i_72/i_148/O (GATE_2_14_OR)
-     1: i_72/i_148/I1 (GATE_2_14_OR)
-     2: i_72/i_147/O (GATE_2_2)
-     3: i_72/i_147/I0 (GATE_2_2)
-     4: i_72/i_146/O (GATE_2_2)
-     5: i_72/i_146/I0 (GATE_2_2)
-     6: i_72/i_150/O (GATE_2_2)
-     7: i_72/i_150/I0 (GATE_2_2)
-     8: i_72/i_149/O (GATE_2_14_OR)
-     9: i_72/i_149/I0 (GATE_2_14_OR)
-    10: i_72/i_148/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_148"
-Found timing loop:
-     0: i_72/i_182/O (GATE_2_14_OR)
-     1: i_72/i_182/I1 (GATE_2_14_OR)
-     2: i_72/i_181/O (GATE_2_2)
-     3: i_72/i_181/I0 (GATE_2_2)
-     4: i_72/i_180/O (GATE_2_2)
-     5: i_72/i_180/I0 (GATE_2_2)
-     6: i_72/i_184/O (GATE_2_2)
-     7: i_72/i_184/I0 (GATE_2_2)
-     8: i_72/i_183/O (GATE_2_14_OR)
-     9: i_72/i_183/I1 (GATE_2_14_OR)
-    10: i_72/i_182/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_182"
-Found timing loop:
-     0: i_72/i_164/O (GATE_2_14_OR)
-     1: i_72/i_164/I1 (GATE_2_14_OR)
-     2: i_72/i_163/O (GATE_2_2)
-     3: i_72/i_163/I0 (GATE_2_2)
-     4: i_72/i_162/O (GATE_2_2)
-     5: i_72/i_162/I0 (GATE_2_2)
-     6: i_72/i_166/O (GATE_2_2)
-     7: i_72/i_166/I0 (GATE_2_2)
-     8: i_72/i_165/O (GATE_2_14_OR)
-     9: i_72/i_165/I1 (GATE_2_14_OR)
-    10: i_72/i_164/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_164"
-Found timing loop:
-     0: i_72/i_173/O (GATE_2_14_OR)
-     1: i_72/i_173/I1 (GATE_2_14_OR)
-     2: i_72/i_172/O (GATE_2_2)
-     3: i_72/i_172/I0 (GATE_2_2)
-     4: i_72/i_171/O (GATE_2_2)
-     5: i_72/i_171/I0 (GATE_2_2)
-     6: i_72/i_175/O (GATE_2_2)
-     7: i_72/i_175/I0 (GATE_2_2)
-     8: i_72/i_174/O (GATE_2_14_OR)
-     9: i_72/i_174/I1 (GATE_2_14_OR)
-    10: i_72/i_173/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_173"
-Found timing loop:
-     0: i_72/i_155/O (GATE_2_14_OR)
-     1: i_72/i_155/I1 (GATE_2_14_OR)
-     2: i_72/i_154/O (GATE_2_2)
-     3: i_72/i_154/I0 (GATE_2_2)
-     4: i_72/i_157/O (GATE_2_2)
-     5: i_72/i_157/I0 (GATE_2_2)
-     6: i_72/i_156/O (GATE_2_14_OR)
-     7: i_72/i_156/I1 (GATE_2_14_OR)
-     8: i_72/i_155/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_155"
-Found timing loop:
-     0: i_72/i_236/O (GATE_2_14_OR)
-     1: i_72/i_236/I1 (GATE_2_14_OR)
-     2: i_72/i_235/O (GATE_2_2)
-     3: i_72/i_235/I0 (GATE_2_2)
-     4: i_72/i_238/O (GATE_2_2)
-     5: i_72/i_238/I0 (GATE_2_2)
-     6: i_72/i_237/O (GATE_2_14_OR)
-     7: i_72/i_237/I1 (GATE_2_14_OR)
-     8: i_72/i_236/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_236"
-Found timing loop:
-     0: i_72/i_190/O (GATE_2_14_OR)
-     1: i_72/i_190/I1 (GATE_2_14_OR)
-     2: i_72/i_189/O (GATE_2_2)
-     3: i_72/i_189/I0 (GATE_2_2)
-     4: i_72/i_192/O (GATE_2_2)
-     5: i_72/i_192/I0 (GATE_2_2)
-     6: i_72/i_191/O (GATE_2_14_OR)
-     7: i_72/i_191/I1 (GATE_2_14_OR)
-     8: i_72/i_190/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_190"
-Found timing loop:
-     0: i_72/i_205/O (GATE_2_14_OR)
-     1: i_72/i_205/I1 (GATE_2_14_OR)
-     2: i_72/i_204/O (GATE_2_2)
-     3: i_72/i_204/I0 (GATE_2_2)
-     4: i_72/i_207/O (GATE_2_2)
-     5: i_72/i_207/I0 (GATE_2_2)
-     6: i_72/i_206/O (GATE_2_14_OR)
-     7: i_72/i_206/I1 (GATE_2_14_OR)
-     8: i_72/i_205/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_205"
-Found timing loop:
-     0: i_72/i_220/O (GATE_2_14_OR)
-     1: i_72/i_220/I1 (GATE_2_14_OR)
-     2: i_72/i_219/O (GATE_2_2)
-     3: i_72/i_219/I0 (GATE_2_2)
-     4: i_72/i_222/O (GATE_2_2)
-     5: i_72/i_222/I0 (GATE_2_2)
-     6: i_72/i_221/O (GATE_2_14_OR)
-     7: i_72/i_221/I1 (GATE_2_14_OR)
-     8: i_72/i_220/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_220"
-Found timing loop:
-     0: i_72/i_228/O (GATE_2_14_OR)
-     1: i_72/i_228/I1 (GATE_2_14_OR)
-     2: i_72/i_227/O (GATE_2_2)
-     3: i_72/i_227/I0 (GATE_2_2)
-     4: i_72/i_230/O (GATE_2_2)
-     5: i_72/i_230/I0 (GATE_2_2)
-     6: i_72/i_229/O (GATE_2_14_OR)
-     7: i_72/i_229/I1 (GATE_2_14_OR)
-     8: i_72/i_228/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_228"
-Found timing loop:
-     0: i_72/i_198/O (GATE_2_14_OR)
-     1: i_72/i_198/I1 (GATE_2_14_OR)
-     2: i_72/i_197/O (GATE_2_2)
-     3: i_72/i_197/I0 (GATE_2_2)
-     4: i_72/i_200/O (GATE_2_2)
-     5: i_72/i_200/I0 (GATE_2_2)
-     6: i_72/i_199/O (GATE_2_14_OR)
-     7: i_72/i_199/I1 (GATE_2_14_OR)
-     8: i_72/i_198/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_198"
-Found timing loop:
-     0: i_72/i_213/O (GATE_2_14_OR)
-     1: i_72/i_213/I1 (GATE_2_14_OR)
-     2: i_72/i_212/O (GATE_2_2)
-     3: i_72/i_212/I0 (GATE_2_2)
-     4: i_72/i_215/O (GATE_2_2)
-     5: i_72/i_215/I0 (GATE_2_2)
-     6: i_72/i_214/O (GATE_2_14_OR)
-     7: i_72/i_214/I1 (GATE_2_14_OR)
-     8: i_72/i_213/O (GATE_2_14_OR)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/slow_clk.v:41]
-Inferred a: "set_disable_timing -from I1 -to O i_72/i_213"
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 661.438 ; gain = 451.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -509,104 +306,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-Found timing loop:
-     0: i_2/O (LUT6)
-     1: i_2/I1 (LUT6)
-     2: i_290/O (LUT2)
-     3: i_290/I1 (LUT2)
-     4: i_2/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_2"
-Found timing loop:
-     0: i_289/O (LUT2)
-     1: i_289/I1 (LUT2)
-     2: i_8/O (LUT6)
-     3: i_8/I1 (LUT6)
-     4: i_289/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_289"
-Found timing loop:
-     0: i_288/O (LUT2)
-     1: i_288/I1 (LUT2)
-     2: i_10/O (LUT6)
-     3: i_10/I1 (LUT6)
-     4: i_288/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_288"
-Found timing loop:
-     0: i_287/O (LUT2)
-     1: i_287/I1 (LUT2)
-     2: i_13/O (LUT6)
-     3: i_13/I1 (LUT6)
-     4: i_287/O (LUT2)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_287"
-Found timing loop:
-     0: i_15/O (LUT6)
-     1: i_15/I1 (LUT6)
-     2: i_286/O (LUT2)
-     3: i_286/I1 (LUT2)
-     4: i_15/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_15"
-Found timing loop:
-     0: i_17/O (LUT6)
-     1: i_17/I1 (LUT6)
-     2: i_285/O (LUT2)
-     3: i_285/I1 (LUT2)
-     4: i_17/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_17"
-Found timing loop:
-     0: i_19/O (LUT6)
-     1: i_19/I1 (LUT6)
-     2: i_296/O (LUT2)
-     3: i_296/I1 (LUT2)
-     4: i_19/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_19"
-Found timing loop:
-     0: i_22/O (LUT6)
-     1: i_22/I1 (LUT6)
-     2: i_295/O (LUT2)
-     3: i_295/I1 (LUT2)
-     4: i_22/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_22"
-Found timing loop:
-     0: i_24/O (LUT6)
-     1: i_24/I1 (LUT6)
-     2: i_294/O (LUT2)
-     3: i_294/I1 (LUT2)
-     4: i_24/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_24"
-Found timing loop:
-     0: i_27/O (LUT6)
-     1: i_27/I1 (LUT6)
-     2: i_293/O (LUT2)
-     3: i_293/I1 (LUT2)
-     4: i_27/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_27"
-Found timing loop:
-     0: i_30/O (LUT6)
-     1: i_30/I1 (LUT6)
-     2: i_292/O (LUT2)
-     3: i_292/I1 (LUT2)
-     4: i_30/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_30"
-Found timing loop:
-     0: i_32/O (LUT6)
-     1: i_32/I1 (LUT6)
-     2: i_291/O (LUT2)
-     3: i_291/I1 (LUT2)
-     4: i_32/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.srcs/sources_1/new/EggD.v:23]
-Inferred a: "set_disable_timing -from I1 -to O i_32"
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -630,7 +331,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -643,7 +344,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -655,25 +356,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -693,59 +394,63 @@ Report Cell Usage:
 |1     |clk_wiz_0 |     1|
 |2     |BUFG      |     1|
 |3     |CARRY4    |    40|
-|4     |LUT1      |   148|
-|5     |LUT2      |   152|
-|6     |LUT3      |    45|
-|7     |LUT4      |    56|
-|8     |LUT5      |    57|
-|9     |LUT6      |    87|
+|4     |LUT1      |   141|
+|5     |LUT2      |   151|
+|6     |LUT3      |    32|
+|7     |LUT4      |    95|
+|8     |LUT5      |    50|
+|9     |LUT6      |   106|
 |10    |FDCE      |   195|
 |11    |FDPE      |    29|
-|12    |FDRE      |    15|
-|13    |LDC       |    24|
-|14    |IBUF      |     6|
-|15    |OBUF      |    13|
+|12    |FDRE      |    25|
+|13    |LD        |    23|
+|14    |LDC       |    24|
+|15    |IBUF      |     6|
+|16    |OBUF      |    13|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+-----------------------+---------------------+------+
 |      |Instance               |Module               |Cells |
 +------+-----------------------+---------------------+------+
-|1     |top                    |                     |   869|
-|2     |  INCREMENT_COUNT_TIME |increment_count_time |   383|
-|3     |    debounce_min       |debouncer_2          |   127|
-|4     |      SLOW_CLK         |slow_clk_5           |   114|
-|5     |    debounce_sec       |debouncer_3          |   136|
-|6     |      SLOW_CLK         |slow_clk_4           |   116|
-|7     |  RUN_COUNT_TIME       |run_count_time       |    82|
-|8     |  SEG_MGMT             |seg_mgmt             |     6|
-|9     |  SET_COOK_TIME        |set_cook_time        |   289|
-|10    |    debounce_min       |debouncer            |   117|
-|11    |      SLOW_CLK         |slow_clk_1           |   114|
-|12    |    debounce_sec       |debouncer_0          |   134|
-|13    |      SLOW_CLK         |slow_clk             |   116|
-|14    |  clk1_2hz             |HalfCLK              |     2|
-|15    |  clk1hz               |MHZtoHZ              |    82|
+|1     |top                    |                     |   932|
+|2     |  INCREMENT_COUNT_TIME |increment_count_time |   359|
+|3     |    debounce_min       |debouncer_3          |   119|
+|4     |      SLOW_CLK         |slow_clk_6           |   114|
+|5     |    debounce_sec       |debouncer_4          |   144|
+|6     |      SLOW_CLK         |slow_clk_5           |   116|
+|7     |  RUN_COUNT_TIME       |run_count_time       |   109|
+|8     |  SEG_MGMT             |seg_mgmt             |    63|
+|9     |    DIV_MIN            |div59                |    28|
+|10    |    DIV_SEC            |div59_2              |    15|
+|11    |  SET_COOK_TIME        |set_cook_time        |   272|
+|12    |    debounce_min       |debouncer            |   131|
+|13    |      SLOW_CLK         |slow_clk_1           |   114|
+|14    |    debounce_sec       |debouncer_0          |   120|
+|15    |      SLOW_CLK         |slow_clk             |   116|
+|16    |  clk1_2hz             |HalfCLK              |     2|
+|17    |  clk1hz               |MHZtoHZ              |    87|
 +------+-----------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 661.652 ; gain = 451.551
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 24 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.391 ; gain = 103.652
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 657.391 ; gain = 447.957
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 661.652 ; gain = 110.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 661.652 ; gain = 451.551
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 24 instances were transformed.
+  A total of 47 instances were transformed.
+  LD => LDCE: 23 instances
   LDC => LDCE: 24 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 55 Warnings, 24 Critical Warnings and 0 Errors encountered.
+66 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 657.391 ; gain = 425.063
-INFO: [Common 17-1381] The checkpoint 'C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/synth_1/EggD.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 657.391 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 00:35:46 2020...
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 661.652 ; gain = 429.785
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/synth_1/EggD.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 661.652 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 18:20:52 2020...

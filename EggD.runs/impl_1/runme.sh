@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/nelso/OneDrive/Desktop/ELEC3500/EggD/EggD.runs/impl_1'
+HD_PWD='C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggD.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

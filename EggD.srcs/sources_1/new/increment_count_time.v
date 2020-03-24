@@ -26,8 +26,8 @@ module increment_count_time(
     input seconds,
     input [1:0] state,
     input reset,
-    input cur_min,
-    input cur_sec,
+    input [5:0] cur_min,
+    input [5:0] cur_sec,
     output reg [5:0] min,
     output reg [5:0] sec
     );

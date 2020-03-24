@@ -28,7 +28,7 @@ module show_count_time(
     output reg [5:0] min
     );
     
-    always @(reset) begin
+    always @(reset or count_sec or count_min) begin
         if (reset) begin
             sec <= 0;
             min <= 0;

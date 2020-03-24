@@ -33,7 +33,7 @@ module MHZtoHZ(
             counter <= 0;
             clk_out <= 0;
         end else if (clk) begin
-            if (counter <= 23'd25000) begin
+            if (counter <= 23'd2500000) begin
                 clk_out <= ~clk_out;
                 counter <= 0;
             end else begin

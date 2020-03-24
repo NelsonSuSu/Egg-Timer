@@ -30,8 +30,8 @@ module seg_mgmt(
     
     wire [3:0] MIN_ONE, SEC_ONE;
     wire [2:0] MIN_TEN, SEC_TEN;
-    div59 DIV_MIN(.double(output_min), .one(MIN_ONE), .ten(MIN_TEN));
-    div59 DIV_SEC(.double(output_sec), .one(SEC_ONE), .ten(SEC_TEN));
+    div59 DIV_MIN(.double(mins), .one(MIN_ONE), .ten(MIN_TEN));
+    div59 DIV_SEC(.double(secs), .one(SEC_ONE), .ten(SEC_TEN));
     
     wire [6:0] seg0, seg1, seg2, seg3;
     bcdto7segment BCD_MIN_ONE(.x(MIN_ONE), .seg(seg0));
@@ -39,32 +39,32 @@ module seg_mgmt(
     bcdto7segment BCD_SEC_ONE(.x(SEC_ONE), .seg(seg2));
     bcdto7segment BCD_SEC_TEN(.x(SEC_ONE), .seg(seg3));
     
-    reg [2:0] counter = 0;
-    wire an0 = 8'b11111110, an1 = 8'b11111101, an2 = 8'b11111011, an3 = 8'b11110111;
+    reg [1:0] counter = 0;
     
     always @(posedge clk) begin
         case(counter)
-            0: begin
-                an <= an0;
+            2'b00: begin
+                an <= 4'b1110;
                 seg <= seg0;
             end
-            1: begin
-                an <= an1;
+            2'b01: begin
+                an <= 4'b1101;
                 seg <= seg1;
             end
-            2: begin
-                an <= an2;
+            2'b10: begin
+                an <= 4'b1011;
                 seg <= seg2;
             end
-            3: begin
-                an <= an3;
+            2'b11: begin
+                an <= 4'b0111;
                 seg <= seg3;
             end
         endcase
-        if (counter != 3)
-            counter <= counter + 1;
+        
+        if (counter != 2'b11)
+            counter <= counter + 2'b01;
         else
-            counter <= 0;
+            counter <= 2'b00;
     end
     
 endmodule
