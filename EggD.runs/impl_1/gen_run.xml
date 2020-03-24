@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1585024552">
+  <File Type="PWROPT-DRC" Name="EggD_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="EggD_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="EggD_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="EggD_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="EggD.tcl"/>
+  <File Type="OPT-HWDEF" Name="EggD.hwdef"/>
+  <File Type="RDI-RDI" Name="EggD.vdi"/>
+  <File Type="OPT-DCP" Name="EggD_opt.dcp"/>
+  <File Type="OPT-DRC" Name="EggD_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="EggD_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="EggD_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="EggD_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="EggD_placed.dcp"/>
+  <File Type="PLACE-IO" Name="EggD_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="EggD_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="EggD_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="EggD_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="EggD_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="EggD_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="EggD_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="EggD_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="EggD_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="EggD_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="EggD_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="EggD_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="EggD_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="EggD_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="EggD_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="EggD_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="EggD_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="EggD_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="EggD.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="EggD_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="EggD.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="EggD_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="EggD.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="EggD_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="EggD.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="EggD_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="EggD_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="EggD_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="EggD_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="EggD_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="EggD_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="EggD_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="EggD_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="EggD_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="EggD_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="EggD_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="EggD_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="EggD_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="EggD_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="EggD_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="EggD.bit"/>
+  <File Type="BITSTR-RBT" Name="EggD.rbt"/>
+  <File Type="BITSTR-NKY" Name="EggD.nky"/>
+  <File Type="BITSTR-BMM" Name="EggD_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="EggD.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="EggD.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/slow_clk.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/debouncer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bcdto7segment.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/div59.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/show_count_time.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/set_cook_time.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/run_count_time.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MHZtoHZ.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/increment_count_time.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/HalfCLK.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seg_mgmt.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/EggD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="EggD"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

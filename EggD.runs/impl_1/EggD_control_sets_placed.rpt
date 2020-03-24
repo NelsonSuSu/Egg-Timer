@@ -1,0 +1,149 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Tue Mar 24 00:36:47 2020
+| Host         : Nelson running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file EggD_control_sets_placed.rpt
+| Design       : EggD
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    85 |
+| Unused register locations in slices containing registers |   561 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            1 |
+| No           | No                    | Yes                    |              78 |           49 |
+| No           | Yes                   | No                     |              30 |           27 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             146 |           53 |
+| Yes          | Yes                   | No                     |               6 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------+-------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|                    Clock Signal                    |                  Enable Signal                  |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++----------------------------------------------------+-------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  INCREMENT_COUNT_TIME/sec_reg[5]_P_0               |                                                 | INCREMENT_COUNT_TIME/sec_reg[5]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[0]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[2]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[3]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[4]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[1]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[2]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[3]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_min/sec_reg[1]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_min/sec_reg[2]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         |                                                 | INCREMENT_COUNT_TIME/debounce_min/sec_reg[3]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         | INCREMENT_COUNT_TIME/min[5]_P_i_1__0_n_0        | INCREMENT_COUNT_TIME/debounce_sec/min_reg[5]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         | INCREMENT_COUNT_TIME/min[5]_P_i_1__0_n_0        | INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         | INCREMENT_COUNT_TIME/min[5]_P_i_1__0_n_0        | INCREMENT_COUNT_TIME/debounce_min/min_reg[2]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         | INCREMENT_COUNT_TIME/min[5]_P_i_1__0_n_0        | INCREMENT_COUNT_TIME/debounce_min/min_reg[0]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         | INCREMENT_COUNT_TIME/min[5]_P_i_1__0_n_0        | INCREMENT_COUNT_TIME/debounce_min/min_reg[3]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_clk         | INCREMENT_COUNT_TIME/min[5]_P_i_1__0_n_0        | INCREMENT_COUNT_TIME/debounce_min/min_reg[4]_P   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[0]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[4]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[5]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/min_reg[0]_P_0               |                                                 | INCREMENT_COUNT_TIME/min_reg[0]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/min_reg[1]_P_0               |                                                 | INCREMENT_COUNT_TIME/min_reg[1]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/min_reg[2]_P_0               |                                                 | INCREMENT_COUNT_TIME/min_reg[2]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/min_reg[3]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/min_reg[3]_P_0               |                                                 | INCREMENT_COUNT_TIME/min_reg[3]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/min_reg[4]_P_0               |                                                 | INCREMENT_COUNT_TIME/min_reg[4]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/min_reg[5]_P_0               |                                                 | INCREMENT_COUNT_TIME/min_reg[5]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/sec_reg[1]_P_0               |                                                 | INCREMENT_COUNT_TIME/sec_reg[1]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/sec_reg[5]_C_0              |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/sec_reg[3]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[3]_C   |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/min_reg[0]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/min_reg[1]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/min_reg[2]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/min                              | INCREMENT_COUNT_TIME/min_reg[1]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/min_reg[4]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/min_reg[5]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/sec_reg[1]_C_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | SET_COOK_TIME/sec_reg[2]_C                       |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | SET_COOK_TIME/sec_reg[4]_C                       |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | SET_COOK_TIME/sec_reg[0]_C_0                     |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | SET_COOK_TIME/sec_reg[3]_C                       |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | reset_IBUF                                       |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/min                              | INCREMENT_COUNT_TIME/min_reg[0]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/min                              | INCREMENT_COUNT_TIME/min_reg[2]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/min                              | INCREMENT_COUNT_TIME/min_reg[3]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/min                              | INCREMENT_COUNT_TIME/min_reg[4]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/min                              | INCREMENT_COUNT_TIME/min_reg[5]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/sec                              | INCREMENT_COUNT_TIME/sec_reg[5]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/sec                              | INCREMENT_COUNT_TIME/sec_reg[1]_P_0              |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/sec                              | SET_COOK_TIME/sec_reg[0]_P_0                     |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/sec                              | SET_COOK_TIME/sec_reg[2]_P                       |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/sec                              | SET_COOK_TIME/sec_reg[3]_P                       |                1 |              1 |
+|  CLK1HZ_BUFG                                       | RUN_COUNT_TIME/sec                              | SET_COOK_TIME/sec_reg[4]_P                       |                1 |              1 |
+|  SET_COOK_TIME/sec_reg[0]_P_0                      |                                                 | SET_COOK_TIME/sec_reg[0]_C_0                     |                1 |              1 |
+|  SET_COOK_TIME/sec_reg[2]_P                        |                                                 | SET_COOK_TIME/sec_reg[2]_C                       |                1 |              1 |
+|  SET_COOK_TIME/sec_reg[3]_P                        |                                                 | SET_COOK_TIME/sec_reg[3]_C                       |                1 |              1 |
+|  SET_COOK_TIME/sec_reg[4]_P                        |                                                 | SET_COOK_TIME/sec_reg[4]_C                       |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_min/min_reg[1]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/min_reg[2]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[2]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/min_reg[0]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[0]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/min_reg[3]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[3]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/min_reg[4]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/min_reg[4]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/sec_reg[1]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[1]_C   |                1 |              1 |
+|  INCREMENT_COUNT_TIME/debounce_min/sec_reg[2]_P    |                                                 | INCREMENT_COUNT_TIME/debounce_sec/sec_reg[2]_C   |                1 |              1 |
+|  CLK1HZ_BUFG                                       |                                                 | INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0] |                2 |              2 |
+|  SET_COOK_TIME/debounce_min/SLOW_CLK/slow_clk      |                                                 | SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0]        |                1 |              2 |
+|  INCREMENT_COUNT_TIME/debounce_min/SLOW_CLK/Q1_reg |                                                 | INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0] |                1 |              2 |
+|  SET_COOK_TIME/debounce_sec/SLOW_CLK/Q1_reg        |                                                 | SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0]        |                1 |              2 |
+|  INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/Q1_reg |                                                 | INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0] |                2 |              2 |
+|  clk5mhz/inst/clk_out1                             |                                                 | SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0]        |                1 |              2 |
+|  clk1_2hz/clk                                      |                                                 |                                                  |                1 |              3 |
+|  SET_COOK_TIME/debounce_sec/CLK                    |                                                 | reset_IBUF                                       |                3 |              6 |
+|  SET_COOK_TIME/debounce_sec/CLK                    | SET_COOK_TIME/min[5]_i_1_n_0                    | reset_IBUF                                       |                2 |              6 |
+|  clk5mhz/inst/clk_out1                             |                                                 | reset_IBUF                                       |               10 |             35 |
+|  CLK1HZ_BUFG                                       | INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/E[0] | INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0] |               18 |             64 |
+|  clk5mhz/inst/clk_out1                             | SET_COOK_TIME/debounce_sec/SLOW_CLK/E[0]        | SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0]        |               17 |             64 |
++----------------------------------------------------+-------------------------------------------------+--------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    73 |
+| 2      |                     6 |
+| 3      |                     1 |
+| 6      |                     2 |
+| 16+    |                     3 |
++--------+-----------------------+
+
+
