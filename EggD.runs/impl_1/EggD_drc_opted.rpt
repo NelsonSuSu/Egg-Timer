@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue Mar 24 18:21:47 2020
+| Date         : Tue Mar 24 21:20:14 2020
 | Host         : Nelson running 64-bit major release  (build 9200)
 | Command      : report_drc -file EggD_drc_opted.rpt
 | Design       : EggD
@@ -24,14 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 5
-+-------------+----------+-------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                 | Violations |
-+-------------+----------+-------------------------------------------------------------+------------+
-| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| IOSR-1      | Warning  | IOB set reset sharing                                       | 2          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
-+-------------+----------+-------------------------------------------------------------+------------+
+             Violations found: 3
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| IOSR-1   | Warning  | IOB set reset sharing                               | 2          |
++----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -56,28 +55,6 @@ Related violations: <none>
 IOSR-1#2 Warning
 IOB set reset sharing  
 IO Seconds connects to flops which have these INCREMENT_COUNT_TIME/debounce_sec/SLOW_CLK/AR[0], SET_COOK_TIME/debounce_sec/SLOW_CLK/AR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT INCREMENT_COUNT_TIME/debounce_sec/sec[5]_C_i_2__0 is driving clock pin of 24 cells. This could lead to large hold time violations. First few involved cells are:
-    INCREMENT_COUNT_TIME/min_reg[0]_C {FDCE}
-    INCREMENT_COUNT_TIME/min_reg[0]_P {FDPE}
-    INCREMENT_COUNT_TIME/min_reg[1]_C {FDCE}
-    INCREMENT_COUNT_TIME/min_reg[4]_P {FDPE}
-    INCREMENT_COUNT_TIME/min_reg[1]_P {FDPE}
-
-Related violations: <none>
-
-PLHOLDVIO-2#2 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT SET_COOK_TIME/debounce_sec/min[5]_i_3 is driving clock pin of 12 cells. This could lead to large hold time violations. First few involved cells are:
-    SET_COOK_TIME/min_reg[0] {FDRE}
-    SET_COOK_TIME/min_reg[1] {FDRE}
-    SET_COOK_TIME/min_reg[2] {FDRE}
-    SET_COOK_TIME/min_reg[3] {FDRE}
-    SET_COOK_TIME/min_reg[4] {FDRE}
-
 Related violations: <none>
 
 

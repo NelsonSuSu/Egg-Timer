@@ -35,9 +35,9 @@ module seg_mgmt(
     
     wire [6:0] seg0, seg1, seg2, seg3;
     bcdto7segment BCD_MIN_ONE(.x(MIN_ONE), .seg(seg0));
-    bcdto7segment BCD_MIN_TEN(.x(MIN_TEN), .seg(seg1));
+    bcdto7segment BCD_MIN_TEN(.x({1'b0, MIN_TEN}), .seg(seg1));
     bcdto7segment BCD_SEC_ONE(.x(SEC_ONE), .seg(seg2));
-    bcdto7segment BCD_SEC_TEN(.x(SEC_ONE), .seg(seg3));
+    bcdto7segment BCD_SEC_TEN(.x({1'b0, SEC_TEN}), .seg(seg3));
     
     reg [1:0] counter = 0;
     

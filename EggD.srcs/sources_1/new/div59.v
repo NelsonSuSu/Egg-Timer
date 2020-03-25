@@ -45,7 +45,10 @@ module div59(
         end else if (double <= 59) begin        
             ten <= 3'b101;
             one <= double - 6'b110010;
-        end   
+        end else begin
+            ten <= 0;
+            one <= 0;
+        end
     end
     
 endmodule

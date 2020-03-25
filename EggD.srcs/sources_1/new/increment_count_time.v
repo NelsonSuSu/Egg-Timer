@@ -38,7 +38,7 @@ module increment_count_time(
     debouncer debounce_min(.clk(clk), .pb(minutes), .reset(reset | enable), .enable(~enable), .pb_out(min_clk));
     debouncer debounce_sec(.clk(clk), .pb(seconds), .reset(reset | enable), .enable(~enable), .pb_out(sec_clk));
     
-    always @(posedge min_clk or posedge sec_clk or posedge enable or posedge reset) begin
+    always @(posedge reset or posedge clk) begin
         if (reset) begin
             min <= 0;
             sec <= 0;

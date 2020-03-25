@@ -34,7 +34,7 @@ module set_cook_time(
     debouncer debounce_min(.clk(clk), .pb(minutes), .reset(reset | state != 2'b00), .enable(state == 2'b00), .pb_out(min_clk));
     debouncer debounce_sec(.clk(clk), .pb(seconds), .reset(reset | state != 2'b00), .enable(state == 2'b00), .pb_out(sec_clk));
     
-    always @(posedge min_clk or posedge sec_clk) begin
+    always @(posedge clk or posedge reset) begin
         if (reset) begin
             min <= 0;
             sec <= 0;

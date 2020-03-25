@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module EggD(
     input CLK100MHZ,
     input reset,
@@ -44,7 +43,7 @@ module EggD(
     HalfCLK clk1_2hz(.clk(CLK1HZ), .reset(reset), .clk_out(CLK1_2HZ));
     
     //FSM assignment
-    always @(state or CookTime or TimerEnable) begin
+    always @(state or CookTime or TimerEnable or Start) begin
         case(state)
             SetCookTime: begin
                 if (CookTime) nxt_state <= SetCookTime;
@@ -118,7 +117,7 @@ module EggD(
     show_count_time SHOW_COUNT_TIME(.reset(reset), .count_sec(INPUT_sec), .count_min(INPUT_min), .sec(COUNT_sec), .min(COUNT_min));
     
     //Counter Time Loop Correction 
-    always @(state) begin
+    always @(posedge CLK5MHZ) begin
         if (state == SetCookTime) begin
             INPUT_sec <= COOK_sec;
             INPUT_min <= COOK_min;
@@ -132,7 +131,7 @@ module EggD(
     assign TimerEnabled = TimerEnable;
     
     //TimerOn Logic
-    always @(TimerEnable) begin
+    always @(posedge CLK5MHZ) begin
         if (INPUT_min == 0 & INPUT_sec == 0)
             TimerOn <= 0;
         else
@@ -141,7 +140,7 @@ module EggD(
     
     reg [5:0] out_min, out_sec;
     //Output Logic
-    always @(state) begin
+    always @(posedge CLK5MHZ) begin
         case(state)
             SetCookTime: begin
                 out_min <= COOK_min;
@@ -149,11 +148,11 @@ module EggD(
             end 
             ShowCountTime: begin
                 out_min <= COUNT_min;
-                out_min <= COUNT_sec;
+                out_sec <= COUNT_sec;
             end 
             RunCountTime: begin
                 out_min <= RUN_min;
-                out_min <= RUN_sec;
+                out_sec <= RUN_sec;
             end 
             IncrementCountTime: begin
                 out_min <= INCREMENT_min;
