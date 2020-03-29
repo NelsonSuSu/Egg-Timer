@@ -58,22 +58,27 @@ module EggsD(
     
     integer ledcounter = 0;
     always @(posedge CLK10HZ) begin
-        if (ledcounter != 9)
-            ledcounter <= ledcounter + 1;
-        else 
+        if (state != CountDown) begin
             ledcounter <= 0;
-        case(ledcounter)
-            0: assign led = 9'b000000000;
-            1: assign led = 9'b000000001;
-            2: assign led = 9'b000000011;
-            3: assign led = 9'b000000111;
-            4: assign led = 9'b000001111;
-            5: assign led = 9'b000011111;
-            6: assign led = 9'b000111111;
-            7: assign led = 9'b001111111;
-            8: assign led = 9'b011111111;
-            9: assign led = 9'b111111111;
-        endcase
+            assign led = 9'b000000000;
+        end else begin
+            if (ledcounter != 9)
+                ledcounter <= ledcounter + 1;
+            else 
+                ledcounter <= 0;
+            case(ledcounter)
+                0: assign led = 9'b000000000;
+                1: assign led = 9'b000000001;
+                2: assign led = 9'b000000011;
+                3: assign led = 9'b000000111;
+                4: assign led = 9'b000001111;
+                5: assign led = 9'b000011111;
+                6: assign led = 9'b000111111;
+                7: assign led = 9'b001111111;
+                8: assign led = 9'b011111111;
+                9: assign led = 9'b111111111;
+            endcase
+        end
     end
     
     reg [5:0] set_min, set_sec;
