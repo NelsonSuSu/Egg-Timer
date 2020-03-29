@@ -1,0 +1,386 @@
+
+*** Running vivado
+    with args -log EggsD.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source EggsD.tcl
+
+
+****** Vivado v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source EggsD.tcl -notrace
+Command: synth_design -top EggsD -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22868 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 308.840 ; gain = 99.563
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'EggsD' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/EggsD.v:23]
+	Parameter CountDown bound to: 0 - type: integer 
+	Parameter CountUp bound to: 1 - type: integer 
+	Parameter Hold bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/.Xil/Vivado-25792-Nelson/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/.Xil/Vivado-25792-Nelson/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_div_5M' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/clk_div_5M.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_div_5M' (2#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/clk_div_5M.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/EggsD.v:98]
+INFO: [Synth 8-638] synthesizing module 'IncrementTime' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/IncrementTime.v:23]
+INFO: [Synth 8-638] synthesizing module 'slow_clk' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/slow_clk.v:23]
+INFO: [Synth 8-256] done synthesizing module 'slow_clk' (3#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/slow_clk.v:23]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/debouncer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (4#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/debouncer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'IncrementTime' (5#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/IncrementTime.v:23]
+INFO: [Synth 8-638] synthesizing module 'CountDownTime' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/CountDownTime.v:23]
+INFO: [Synth 8-256] done synthesizing module 'CountDownTime' (6#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/CountDownTime.v:23]
+INFO: [Synth 8-638] synthesizing module 'SegMgmt' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/SegMgmt.v:23]
+INFO: [Synth 8-638] synthesizing module 'div59' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/div59.v:23]
+INFO: [Synth 8-256] done synthesizing module 'div59' (7#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/div59.v:23]
+INFO: [Synth 8-638] synthesizing module 'bcdto7segment' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/bcdto7segment.v:23]
+INFO: [Synth 8-256] done synthesizing module 'bcdto7segment' (8#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/bcdto7segment.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SegMgmt' (9#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/SegMgmt.v:23]
+INFO: [Synth 8-256] done synthesizing module 'EggsD' (10#1) [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/EggsD.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 346.117 ; gain = 136.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 346.117 ; gain = 136.840
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk5MHZ' [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/EggsD.v:42]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/.Xil/Vivado-25792-Nelson/dcp/clk_wiz_0_in_context.xdc] for cell 'clk5MHZ'
+Finished Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/.Xil/Vivado-25792-Nelson/dcp/clk_wiz_0_in_context.xdc] for cell 'clk5MHZ'
+Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/constrs_1/imports/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/constrs_1/imports/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/constrs_1/imports/constrs_1/imports/ELEC3500_1/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/EggsD_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/EggsD_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 659.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/.Xil/Vivado-25792-Nelson/dcp/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/.Xil/Vivado-25792-Nelson/dcp/clk_wiz_0_in_context.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "finished" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 10    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 35    
+	   4 Input      6 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
+	  10 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module EggsD 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 2     
+	  10 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module clk_div_5M 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module slow_clk 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module IncrementTime 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	                6 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 22    
+Module CountDownTime 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 4     
+Module div59 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 5     
++---Muxes : 
+	   7 Input      3 Bit        Muxes := 1     
+Module SegMgmt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "incrementTime/SLOW_CLK/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "incrementTime/SLOW_CLK/slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk5MHZ/clk_out1' to pin 'clk5MHZ/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |CARRY4    |    16|
+|3     |LUT1      |    45|
+|4     |LUT2      |    43|
+|5     |LUT3      |    31|
+|6     |LUT4      |    14|
+|7     |LUT5      |    65|
+|8     |LUT6      |   105|
+|9     |FDCE      |    94|
+|10    |FDPE      |    28|
+|11    |FDRE      |    26|
+|12    |LDC       |    25|
+|13    |IBUF      |     6|
+|14    |OBUF      |    13|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------+--------------+------+
+|      |Instance         |Module        |Cells |
++------+-----------------+--------------+------+
+|1     |top              |              |   512|
+|2     |  clk1HZ         |clk_div_5M    |    85|
+|3     |  countDownTime  |CountDownTime |    97|
+|4     |  incrementTime  |IncrementTime |   230|
+|5     |    SLOW_CLK     |slow_clk      |   115|
+|6     |    debounce_min |debouncer     |    10|
+|7     |    debounce_sec |debouncer_0   |    19|
+|8     |  segMGMT        |SegMgmt       |    63|
++------+-----------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.969 ; gain = 450.691
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 659.969 ; gain = 110.957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 659.969 ; gain = 450.691
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25 instances were transformed.
+  LDC => LDCE: 25 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 659.969 ; gain = 429.020
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/EggsD.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 659.969 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 28 18:16:11 2020...
