@@ -1,0 +1,27 @@
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto bf50ea884cc04637acdbd942dc5bf14c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Egg_TimerTB_behav xil_defaultlib.Egg_TimerTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=32.0,...
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_div_5M
+Compiling module xil_defaultlib.clk10hz
+Compiling module xil_defaultlib.slow_clk
+Compiling module xil_defaultlib.debouncer
+Compiling module xil_defaultlib.IncrementTime
+Compiling module xil_defaultlib.CountDownTime
+Compiling module xil_defaultlib.div59
+Compiling module xil_defaultlib.bcdto7segment
+Compiling module xil_defaultlib.SegMgmt
+Compiling module xil_defaultlib.EggsD
+Compiling module xil_defaultlib.Egg_TimerTB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Egg_TimerTB_behav

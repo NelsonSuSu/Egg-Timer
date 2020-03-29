@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date             : Wed Mar 25 18:51:20 2020
+| Date             : Sat Mar 28 18:18:00 2020
 | Host             : Nelson running 64-bit major release  (build 9200)
 | Command          : report_power -file EggsD_power_routed.rpt -pb EggsD_power_summary_routed.pb -rpx EggsD_power_routed.rpx
 | Design           : EggsD
@@ -50,12 +50,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      451 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      200 |     63400 |            0.32 |
-|   Register     |    <0.001 |      172 |    126800 |            0.14 |
+| Slice Logic    |    <0.001 |      465 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      211 |     63400 |            0.33 |
+|   Register     |    <0.001 |      173 |    126800 |            0.14 |
 |   CARRY4       |    <0.001 |       16 |     15850 |            0.10 |
 |   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      399 |       --- |             --- |
+| Signals        |    <0.001 |      413 |       --- |             --- |
 | MMCM           |     0.086 |        1 |         6 |           16.67 |
 | I/O            |     0.001 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |

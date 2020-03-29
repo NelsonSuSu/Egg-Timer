@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Wed Mar 25 18:51:18 2020
+| Date         : Sat Mar 28 18:17:58 2020
 | Host         : Nelson running 64-bit major release  (build 9200)
 | Command      : report_drc -file EggsD_drc_routed.rpt -pb EggsD_drc_routed.pb -rpx EggsD_drc_routed.rpx
 | Design       : EggsD
@@ -104,7 +104,7 @@ Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net countDownTime/sec_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin countDownTime/sec_reg[4]_LDC_i_1/O, cell countDownTime/sec_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net countDownTime/sec_reg[4]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin countDownTime/sec_reg[4]_LDC_i_1__0/O, cell countDownTime/sec_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
@@ -114,62 +114,62 @@ Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/min_reg[2]_P_0 is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/min_reg[2]_LDC_i_1/O, cell incrementTime/debounce_sec/min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_min/min_reg[2]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_min/min_reg[2]_LDC_i_1/O, cell incrementTime/debounce_min/min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/min_reg[3]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/min_reg[3]_LDC_i_1/O, cell incrementTime/debounce_sec/min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_min/min_reg[3]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_min/min_reg[3]_LDC_i_1/O, cell incrementTime/debounce_min/min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/min_reg[4]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/min_reg[4]_LDC_i_1/O, cell incrementTime/debounce_sec/min_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_min/min_reg[4]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_min/min_reg[4]_LDC_i_1/O, cell incrementTime/debounce_min/min_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/min_reg[5]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/min_reg[5]_LDC_i_1/O, cell incrementTime/debounce_sec/min_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_min/min_reg[5]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_min/min_reg[5]_LDC_i_1/O, cell incrementTime/debounce_min/min_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/sec_reg[0]_P_0 is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[0]_LDC_i_1/O, cell incrementTime/debounce_sec/sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_min/sec_reg[2]_P_0 is a gated clock net sourced by a combinational pin incrementTime/debounce_min/sec_reg[2]_LDC_i_1/O, cell incrementTime/debounce_min/sec_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/sec_reg[1]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[1]_LDC_i_1/O, cell incrementTime/debounce_sec/sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/min_reg[0]_P_1 is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/min_reg[0]_LDC_i_1/O, cell incrementTime/debounce_sec/min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/sec_reg[2]_P_0 is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[2]_LDC_i_1/O, cell incrementTime/debounce_sec/sec_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/min_reg[1]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/min_reg[1]_LDC_i_1/O, cell incrementTime/debounce_sec/min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#21 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/sec_reg[3]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[3]_LDC_i_1__0/O, cell incrementTime/debounce_sec/sec_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/sec_reg[0]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[0]_LDC_i_1/O, cell incrementTime/debounce_sec/sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#22 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/sec_reg[4]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[4]_LDC_i_1__0/O, cell incrementTime/debounce_sec/sec_reg[4]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/sec_reg[1]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[1]_LDC_i_1/O, cell incrementTime/debounce_sec/sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#23 Warning
 Gated clock check  
-Net incrementTime/debounce_sec/sec_reg[5]_P_0 is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[5]_LDC_i_1__0/O, cell incrementTime/debounce_sec/sec_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/sec_reg[3]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[3]_LDC_i_1__0/O, cell incrementTime/debounce_sec/sec_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#24 Warning
 Gated clock check  
-Net incrementTime/min_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin incrementTime/min_reg[0]_LDC_i_1/O, cell incrementTime/min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/sec_reg[4]_P is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[4]_LDC_i_1/O, cell incrementTime/debounce_sec/sec_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#25 Warning
 Gated clock check  
-Net incrementTime/min_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin incrementTime/min_reg[1]_LDC_i_1/O, cell incrementTime/min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incrementTime/debounce_sec/sec_reg[5]_P_0 is a gated clock net sourced by a combinational pin incrementTime/debounce_sec/sec_reg[5]_LDC_i_1__0/O, cell incrementTime/debounce_sec/sec_reg[5]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

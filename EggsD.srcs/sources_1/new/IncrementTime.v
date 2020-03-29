@@ -38,56 +38,56 @@ module IncrementTime(
     
     wire min_clk, sec_clk;
     debouncer debounce_min(.clk(clk), 
-    .pb(minutes), 
-    .reset(reset), 
-    .enable(~load), 
-    .pb_out(min_clk));
+        .pb(minutes), 
+        .reset(reset), 
+        .enable(~load), 
+        .pb_out(min_clk));
     
     debouncer debounce_sec(.clk(clk), 
-    .pb(seconds), 
-    .reset(reset), 
-    .enable(~load), 
-    .pb_out(sec_clk));
+        .pb(seconds), 
+        .reset(reset), 
+        .enable(~load), 
+        .pb_out(sec_clk));
 
-    always @(posedge reset or posedge load or posedge slowpoke or posedge enable) begin
+    always @(posedge reset or posedge load or posedge sec_clk or posedge min_clk or posedge enable) begin
         if (reset) begin
-            sec <= 0;
+            sec <= 6'b000000;
             min <= 0;
         end else if (load) begin
             sec <= count_sec;
             min <= count_min;
         end else if (enable) begin
             if (min_clk & sec_clk) begin
-                if (min == 6'b111011 & sec == 6'b111011) begin
+                if (min == 59 & sec == 59) begin
                     min <= 0;
                     sec <= 0;
-                end else if (min <= 6'b111010 & sec <= 6'b111010) begin
-                    min <= min + 6'b000001;
-                    sec <= sec + 6'b000001;
-                end else if (min == 6'b111011 & sec <= 6'b111011) begin
+                end else if (min <= 58 & sec <= 58) begin
+                    min <= min + 1;
+                    sec <= sec + 1;
+                end else if (min == 59 & sec <= 58) begin
                     min <= 0;
-                    sec <= sec + 6'b000001;
-                end else if (min <= 6'b111011 & sec == 6'b111011) begin
-                    min <= min + 6'b000001;
+                    sec <= sec + 1;
+                end else if (min <= 57 & sec == 59) begin
+                    min <= min + 2;
                     sec <= 0;
                 end
             end else if (sec_clk) begin
-                if (sec == 6'b111011) begin
-                    if (min == 6'b111011) begin
+                if (sec == 59) begin
+                    if (min == 59) begin
                         min <= 0;
                         sec <= 0;
                     end else begin
-                        min <= min + 6'b000001;
+                        min <= min + 1;
                         sec <= 0;
                     end
                 end else begin
-                    sec <= sec + 6'b000001;
+                    sec <= sec + 1;
                 end
             end else if (min_clk) begin
-                if (min == 6'b111011) begin
+                if (min == 59) begin
                     min <= 0;
                 end else begin
-                    min <= min + 6'b000001;
+                    min <= min + 1;
                 end
             end
         end

@@ -28,22 +28,22 @@ module div59(
     
     always @(double) begin
         if (double <= 9) begin
-            ten <= 3'b000;
+            ten <= 0;
             one <= double;
         end else if (double <= 19) begin
-            ten <= 3'b001;
+            ten <= 1;
             one <= double - 6'b001010;
         end else if (double <= 29) begin
-            ten <= 3'b010;
+            ten <= 2;
             one <= double - 6'b010100;
         end else if (double <= 39) begin  
-            ten <= 3'b011;
+            ten <= 3;
             one <= double - 6'b011110;
         end else if (double <= 49) begin        
-            ten <= 3'b100;
+            ten <= 4;
             one <= double - 6'b101000;
         end else if (double <= 59) begin        
-            ten <= 3'b101;
+            ten <= 5;
             one <= double - 6'b110010;
         end else begin
             ten <= 0;

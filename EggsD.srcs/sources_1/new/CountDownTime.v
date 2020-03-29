@@ -41,15 +41,15 @@ module CountDownTime(
             sec <= count_sec;
             min <= count_min;
         end else if (enable) begin
-            if (sec == 6'b000000) begin
-                if (min == 6'b000000) begin
+            if (sec == 0) begin
+                if (min == 0) begin
                     finished <= 1;
                 end else begin
-                    min <= min - 6'b000001;
-                    sec <= 6'b111011;
+                    min <= min - 1;
+                    sec <= 59;
                 end
             end else begin
-                sec <= sec - 6'b000001;
+                sec <= sec - 1;
             end
         end
     end
