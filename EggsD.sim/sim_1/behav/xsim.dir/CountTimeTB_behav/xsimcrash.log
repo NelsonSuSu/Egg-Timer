@@ -1,0 +1,39 @@
+Unable to capture context for thread 22048 in process 9128, can not generate back trace
+Unable to capture context for thread 19096 in process 9128, can not generate back trace
+Exception at PC 0x00007FFC324ABB93
+Printing stacktrace...
+
+Unable to capture context for thread 19096 in process 9128, can not generate back trace
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+[0]  [0x00007FFC324ABB93]
+[1]  [0x00007FFC324ABB93]
+[2]  [0x00007FFC324AB4A1]
+[3]  [0x00007FFC324AB3EF]
+[4]  [0x00007FFC324919FE]
+[5]  [0x00007FFC32490ED1]
+[6]  [0x00007FFC32490D76]
+[7]  [0x00007FFC324379F6]
+[8]  [0x00007FFC32427AFB]
+[9]  [0x00007FFC3254E90A]
+[10]  [0x00007FFC32569F87]
+[11]  [0x00007FFC3256A05F]
+[12] (BaseThreadInitThunk+0x14) [0x00007FFCD7147BD4]
+[13] (RtlUserThreadStart+0x21) [0x00007FFCD7A6CED1]
+Done
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859
+Exception at PC 0x00007FFCD54FA859

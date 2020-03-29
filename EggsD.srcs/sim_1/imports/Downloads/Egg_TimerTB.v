@@ -23,7 +23,7 @@
 module Egg_TimerTB(
     );
     
-    wire [3:0] an;
+    wire [7:0] an;
     wire [6:0] seg;
     wire timerOn, timerEnabled, CLK1;
     reg timerEnable, cookTime, start, minutes, seconds, CLK100MHZ, reset;
@@ -40,9 +40,8 @@ module Egg_TimerTB(
          .Seconds(seconds),
          .CLK100MHZ(CLK100MHZ),
          .reset(reset),
-         .set_min(min),
-         .set_sec(sec),
-         .CLK1HZ(CLK1),
+         .set_min_out(min),
+         .set_sec_out(sec),
          .led(led));
                          
     initial begin 

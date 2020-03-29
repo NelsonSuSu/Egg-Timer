@@ -27,7 +27,7 @@ module slow_clk(
     output reg slow_clk
     );
     
-    integer counter = 0;
+    reg [32:0] counter = 0;
     
     always @ (posedge clk or posedge reset) begin
         if (reset) begin

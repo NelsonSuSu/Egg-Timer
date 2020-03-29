@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Sat Mar 28 18:15:16 2020
-# Process ID: 25792
+# Start of session at: Sun Mar 29 00:04:36 2020
+# Process ID: 20268
 # Current directory: C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1
 # Command line: vivado.exe -log EggsD.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source EggsD.tcl
 # Log file: C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.runs/synth_1/EggsD.vds

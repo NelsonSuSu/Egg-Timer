@@ -30,18 +30,17 @@ module EggsD(
     input Seconds,
     output reg TimerOn,
     output TimerEnabled,
-    output CLK1HZ,
-    output [3:0] an,
+    output [7:0] an,
     output [6:0] seg,
-    output [5:0] set_min,
-    output [5:0]set_sec,
+//    output [5:0] set_min_out,
+//    output [5:0] set_sec_out,
+    output finished,
     output reg [8:0] led
     );
     
     reg [1:0] state, nxt_state;
     parameter CountDown = 0, CountUp = 1, Hold = 2;
     wire CLK5MHZ, CLK1HZ, CLK10HZ;
-    
     clk_wiz_0 clk5MHZ(.clk_in1(CLK100MHZ),
         .reset(reset),
         .clk_out1(CLK5MHZ));
@@ -54,36 +53,36 @@ module EggsD(
     clk10hz clk10HZ(.clk_in(CLK5MHZ),
         .reset(reset),
         .enable(state == CountDown),
-        .clk_out(CLK100HZ));
+        .clk_out(CLK10HZ));
     
     integer ledcounter = 0;
     always @(posedge CLK10HZ) begin
         if (state != CountDown) begin
             ledcounter <= 0;
-            assign led = 9'b000000000;
+             led <= 9'b000000000;
         end else begin
             if (ledcounter != 9)
                 ledcounter <= ledcounter + 1;
             else 
                 ledcounter <= 0;
             case(ledcounter)
-                0: assign led = 9'b000000000;
-                1: assign led = 9'b000000001;
-                2: assign led = 9'b000000011;
-                3: assign led = 9'b000000111;
-                4: assign led = 9'b000001111;
-                5: assign led = 9'b000011111;
-                6: assign led = 9'b000111111;
-                7: assign led = 9'b001111111;
-                8: assign led = 9'b011111111;
-                9: assign led = 9'b111111111;
+                0: led <= 9'b000000000;
+                1: led <= 9'b000000001;
+                2: led <= 9'b000000011;
+                3: led <= 9'b000000111;
+                4: led <= 9'b000001111;
+                5: led <= 9'b000011111;
+                6: led <= 9'b000111111;
+                7: led <= 9'b001111111;
+                8: led <= 9'b011111111;
+                9: led <= 9'b111111111;
             endcase
         end
     end
     
     reg [5:0] set_min, set_sec;
     wire [5:0] up_min, up_sec, down_min, down_sec, hold_min, hold_sec;
-    wire finished;
+//    wire finished;
     //TimerEnabled Logic
     assign TimerEnabled = TimerEnable;
     
@@ -177,6 +176,9 @@ module EggsD(
     
     assign hold_sec = set_sec;
     assign hold_min = set_min;
+    
+//    assign set_sec_out = set_sec;
+//    assign set_min_out = set_min;
         
     SegMgmt segMGMT(
         .clk(CLK5MHZ),
