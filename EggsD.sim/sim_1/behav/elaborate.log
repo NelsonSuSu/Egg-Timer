@@ -14,7 +14,6 @@ Compiling module xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz
 Compiling module xil_defaultlib.clk_wiz_0
 Compiling module xil_defaultlib.clk_div_5M
 Compiling module xil_defaultlib.clk10hz
-Compiling module xil_defaultlib.slow_clk
 Compiling module xil_defaultlib.debouncer
 Compiling module xil_defaultlib.IncrementTime
 Compiling module xil_defaultlib.CountDownTime

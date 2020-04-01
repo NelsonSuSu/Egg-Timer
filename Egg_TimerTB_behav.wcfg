@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Egg_TimerTB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Egg_TimerTB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="198600000001fs"></ZoomEndTime>
+      <Cursor1Time time="111486400000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="126"></NameColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/Egg_TimerTB/an" type="array">
+      <obj_property name="ElementShortName">an[7:0]</obj_property>
+      <obj_property name="ObjectShortName">an[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/seg" type="array">
+      <obj_property name="ElementShortName">seg[6:0]</obj_property>
+      <obj_property name="ObjectShortName">seg[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/timerOn" type="logic">
+      <obj_property name="ElementShortName">timerOn</obj_property>
+      <obj_property name="ObjectShortName">timerOn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/timerEnabled" type="logic">
+      <obj_property name="ElementShortName">timerEnabled</obj_property>
+      <obj_property name="ObjectShortName">timerEnabled</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/beep" type="logic">
+      <obj_property name="ElementShortName">beep</obj_property>
+      <obj_property name="ObjectShortName">beep</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/finished" type="logic">
+      <obj_property name="ElementShortName">finished</obj_property>
+      <obj_property name="ObjectShortName">finished</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/timerEnable" type="logic">
+      <obj_property name="ElementShortName">timerEnable</obj_property>
+      <obj_property name="ObjectShortName">timerEnable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/cookTime" type="logic">
+      <obj_property name="ElementShortName">cookTime</obj_property>
+      <obj_property name="ObjectShortName">cookTime</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/minutes" type="logic">
+      <obj_property name="ElementShortName">minutes</obj_property>
+      <obj_property name="ObjectShortName">minutes</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/seconds" type="logic">
+      <obj_property name="ElementShortName">seconds</obj_property>
+      <obj_property name="ObjectShortName">seconds</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/CLK100MHZ" type="logic">
+      <obj_property name="ElementShortName">CLK100MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/min" type="array">
+      <obj_property name="ElementShortName">min[5:0]</obj_property>
+      <obj_property name="ObjectShortName">min[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/sec" type="array">
+      <obj_property name="ElementShortName">sec[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sec[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Egg_TimerTB/led" type="array">
+      <obj_property name="ElementShortName">led[8:0]</obj_property>
+      <obj_property name="ObjectShortName">led[8:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

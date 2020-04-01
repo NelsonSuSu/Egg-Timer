@@ -30,7 +30,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys4_ddr"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="33"/>
+    <Option Name="WTXSimLaunchSim" Val="46"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -80,6 +80,22 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/clk_div_5M.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/clk_div_5M.v"/>
+          <Attr Name="ImportTime" Val="1585171805"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/clk10hz.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/IncrementTime.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/IncrementTime.v"/>
@@ -93,22 +109,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/CountDownTime.v"/>
           <Attr Name="ImportTime" Val="1585172097"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/clk_div_5M.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/clk_div_5M.v"/>
-          <Attr Name="ImportTime" Val="1585171805"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/clk10hz.v">
-        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -182,19 +182,8 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/Downloads/Egg_TimerTB.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/Egg_TimerTB.v"/>
           <Attr Name="ImportTime" Val="1585148579"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/Downloads/CountTimeTB.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/CountTimeTB.v"/>
-          <Attr Name="ImportTime" Val="1585148577"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -210,6 +199,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/imports/Downloads/CountTimeTB.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/CountTimeTB.v"/>
+          <Attr Name="ImportTime" Val="1585148577"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/imports/Downloads/DebouncerTB.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -220,13 +219,31 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/Egg_TimerTB_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/CookTimeTB_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/CountTimeTB_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="EggsD"/>
+        <Option Name="TopModule" Val="Egg_TimerTB"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/Egg_TimerTB_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/CookTimeTB_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/CountTimeTB_behav.wcfg"/>
         <Option Name="xsim.simulate.runtime" Val="280us"/>
       </Config>
     </FileSet>

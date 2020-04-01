@@ -18,14 +18,14 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+//set sim to 280us
 
 module Egg_TimerTB(
     );
     
     wire [7:0] an;
     wire [6:0] seg;
-    wire timerOn, timerEnabled, CLK1;
+    wire timerOn, timerEnabled, beep, finished;
     reg timerEnable, cookTime, start, minutes, seconds, CLK100MHZ, reset;
     wire [5:0] min, sec;
     wire [8:0] led;
@@ -42,7 +42,9 @@ module Egg_TimerTB(
          .reset(reset),
          .set_min_out(min),
          .set_sec_out(sec),
-         .led(led));
+         .led(led),
+         .beep(beep),
+         .finished(finished));
                          
     initial begin 
         CLK100MHZ = 0;
@@ -56,7 +58,6 @@ module Egg_TimerTB(
         minutes <= 0;
         seconds <= 0;
         reset <= 0;
-        
         //cycle reset 
         reset <= #2245 1;
         reset <= #3367 0;

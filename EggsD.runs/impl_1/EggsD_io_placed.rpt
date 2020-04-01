@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Sun Mar 29 00:06:53 2020
+| Date         : Wed Apr 01 09:14:01 2020
 | Host         : Nelson running 64-bit major release  (build 9200)
 | Command      : report_io -file EggsD_io_placed.rpt
 | Design       : EggsD
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            34 |
+|            35 |
 +---------------+
 
 
@@ -98,7 +98,7 @@ Table of Contents
 | D9         |              | High Range | IO_L6N_T0_VREF_16            | User IO     |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |
 | D10        |              | High Range | IO_L19N_T3_VREF_16           | User IO     |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |
 | D11        |              |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| D12        |              | High Range | IO_L6P_T0_15                 | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
+| D12        | beep         | High Range | IO_L6P_T0_15                 | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | D13        |              | High Range | IO_L6N_T0_VREF_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
 | D14        |              | High Range | IO_L1P_T0_AD0P_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |
 | D15        |              | High Range | IO_L12P_T1_MRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |

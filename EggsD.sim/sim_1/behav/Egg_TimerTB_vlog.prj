@@ -1,14 +1,13 @@
 # compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/imports/new/debouncer.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/imports/new/div59.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/imports/new/bcdto7segment.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
-verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/imports/new/slow_clk.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
-verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/imports/new/debouncer.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
-verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/clk10hz.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
-verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/SegMgmt.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/clk_div_5M.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
-verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/CountDownTime.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
+verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/clk10hz.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/IncrementTime.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
+verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/CountDownTime.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
+verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/SegMgmt.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sources_1/new/EggsD.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 verilog xil_defaultlib  "../../../EggsD.srcs/sim_1/imports/Downloads/Egg_TimerTB.v" --include "../../../EggsD.srcs/sources_1/ip/clk_wiz_0"
 

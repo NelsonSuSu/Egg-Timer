@@ -67,3 +67,5 @@ set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { Start }]; #IO_L10N_T1_D15_14 Sch=btnr
 set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS33 } [get_ports { Seconds }]; #IO_L9N_T1_DQS_D13_14 Sch=btnd
+set_property src_info {type:XDC file:1 line:108 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D12   IOSTANDARD LVCMOS33 } [get_ports { beep }]; #IO_L6P_T0_15 Sch=aud_sd

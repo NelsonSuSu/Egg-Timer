@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Sun Mar 29 00:05:48 2020
+| Date         : Wed Apr 01 09:12:54 2020
 | Host         : Nelson running 64-bit major release  (build 9200)
 | Command      : report_utilization -file EggsD_utilization_synth.rpt -pb EggsD_utilization_synth.pb
 | Design       : EggsD
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |  303 |     0 |     63400 |  0.48 |
 |   LUT as Logic          |  303 |     0 |     63400 |  0.48 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  219 |     0 |    126800 |  0.17 |
-|   Register as Flip Flop |  194 |     0 |    126800 |  0.15 |
+| Slice Registers         |  220 |     0 |    126800 |  0.17 |
+|   Register as Flip Flop |  195 |     0 |    126800 |  0.15 |
 |   Register as Latch     |   25 |     0 |    126800 |  0.02 |
 | F7 Muxes                |    1 |     0 |     31700 | <0.01 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 28    |          Yes |           - |          Set |
 | 131   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 60    |          Yes |       Reset |            - |
+| 61    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   33 |     0 |       210 | 15.71 |
+| Bonded IOB                  |   34 |     0 |       210 | 16.19 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -148,16 +148,16 @@ Table of Contents
 +----------+------+---------------------+
 | FDCE     |  106 |        Flop & Latch |
 | LUT6     |  101 |                 LUT |
-| FDRE     |   60 |        Flop & Latch |
+| FDRE     |   61 |        Flop & Latch |
 | LUT2     |   58 |                 LUT |
 | LUT1     |   58 |                 LUT |
 | LUT5     |   57 |                 LUT |
 | LUT3     |   52 |                 LUT |
+| OBUF     |   28 |                  IO |
 | FDPE     |   28 |        Flop & Latch |
-| OBUF     |   27 |                  IO |
 | CARRY4   |   27 |          CarryLogic |
+| LUT4     |   25 |                 LUT |
 | LDCE     |   25 |        Flop & Latch |
-| LUT4     |   24 |                 LUT |
 | IBUF     |    6 |                  IO |
 | MUXF7    |    1 |               MuxFx |
 | BUFG     |    1 |               Clock |

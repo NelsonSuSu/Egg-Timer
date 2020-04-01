@@ -32,10 +32,11 @@ module EggsD(
     output TimerEnabled,
     output [7:0] an,
     output [6:0] seg,
-//    output [5:0] set_min_out,
-//    output [5:0] set_sec_out,
-    output finished,
-    output reg [8:0] led
+    output [5:0] set_min_out,
+    output [5:0] set_sec_out,
+    output reg finished,
+    output reg [8:0] led,
+    output reg beep
     );
     
     reg [1:0] state, nxt_state;
@@ -78,6 +79,14 @@ module EggsD(
                 9: led <= 9'b111111111;
             endcase
         end
+    end
+    
+    //finished countdown beeper
+    always @(posedge CLK5MHZ) begin
+        if (finished) 
+            beep <= ~beep;
+        else
+            beep <= 0;
     end
     
     reg [5:0] set_min, set_sec;
@@ -125,6 +134,13 @@ module EggsD(
             TimerOn <= TimerEnable & CLK1HZ;
     end
     
+    always @(posedge CLK5MHZ) begin
+        if (set_min == 0 & set_sec == 0)
+            finished <= 1;
+        else 
+            finished <= 0;
+    end
+    
     IncrementTime incrementTime(
         .clk(CLK5MHZ),
         .load(state != CountUp),
@@ -145,8 +161,7 @@ module EggsD(
         .count_sec(set_sec),
         .count_min(set_min),
         .min(down_min),
-        .sec(down_sec),
-        .finished(finished));
+        .sec(down_sec));
     
     always @(posedge CLK5MHZ or posedge reset) begin
         if (reset) begin
@@ -177,8 +192,8 @@ module EggsD(
     assign hold_sec = set_sec;
     assign hold_min = set_min;
     
-//    assign set_sec_out = set_sec;
-//    assign set_min_out = set_min;
+    assign set_sec_out = set_sec;
+    assign set_min_out = set_min;
         
     SegMgmt segMGMT(
         .clk(CLK5MHZ),
