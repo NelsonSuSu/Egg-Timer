@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1585433710">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1585746692">
   <File Type="RDS-PROPCONSTRS" Name="EggsD_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="EggsD.tcl"/>
   <File Type="RDS-RDS" Name="EggsD.vds"/>
@@ -10,6 +10,15 @@
   <File Type="VDS-TIMING-PB" Name="EggsD_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/debouncer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/EggD.srcs/sources_1/new/debouncer.v"/>
+        <Attr Name="ImportTime" Val="1585146570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/div59.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/EggD.srcs/sources_1/new/div59.v"/>
@@ -28,33 +37,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/slow_clk.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/EggD.srcs/sources_1/new/slow_clk.v"/>
-        <Attr Name="ImportTime" Val="1585015901"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/debouncer.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/EggD.srcs/sources_1/new/debouncer.v"/>
-        <Attr Name="ImportTime" Val="1585146570"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/SegMgmt.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/SegMgmt.v"/>
-        <Attr Name="ImportTime" Val="1585176442"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/clk_div_5M.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/clk_div_5M.v"/>
@@ -64,10 +46,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/CountDownTime.v">
+    <File Path="$PSRCDIR/sources_1/new/clk10hz.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/CountDownTime.v"/>
-        <Attr Name="ImportTime" Val="1585172097"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -82,10 +62,54 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/CountDownTime.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/CountDownTime.v"/>
+        <Attr Name="ImportTime" Val="1585172097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SegMgmt.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/SegMgmt.v"/>
+        <Attr Name="ImportTime" Val="1585176442"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/EggsD.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Eggds/Eggds.srcs/sources_1/new/EggsD.v"/>
         <Attr Name="ImportTime" Val="1585176337"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/slow_clk.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/EggD.srcs/sources_1/new/slow_clk.v"/>
+        <Attr Name="ImportTime" Val="1585015901"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UpTime.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk100hz.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

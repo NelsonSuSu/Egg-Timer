@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date             : Sat Mar 28 18:18:00 2020
+| Date             : Wed Apr 01 09:15:21 2020
 | Host             : Nelson running 64-bit major release  (build 9200)
 | Command          : report_power -file EggsD_power_routed.rpt -pb EggsD_power_summary_routed.pb -rpx EggsD_power_routed.rpx
 | Design           : EggsD
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.185 |
-| Dynamic (W)              | 0.088 |
+| Total On-Chip Power (W)  | 0.191 |
+| Dynamic (W)              | 0.094 |
 | Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 4.6   |
-| Max Ambient (C)          | 84.2  |
-| Junction Temperature (C) | 25.8  |
+| Max Ambient (C)          | 84.1  |
+| Junction Temperature (C) | 25.9  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,16 +50,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      465 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      211 |     63400 |            0.33 |
-|   Register     |    <0.001 |      173 |    126800 |            0.14 |
-|   CARRY4       |    <0.001 |       16 |     15850 |            0.10 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      413 |       --- |             --- |
+| Slice Logic    |    <0.001 |      561 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      248 |     63400 |            0.39 |
+|   Register     |    <0.001 |      220 |    126800 |            0.17 |
+|   CARRY4       |    <0.001 |       27 |     15850 |            0.17 |
+|   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
+|   BUFG         |     0.000 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |       16 |       --- |             --- |
+| Signals        |    <0.001 |      459 |       --- |             --- |
 | MMCM           |     0.086 |        1 |         6 |           16.67 |
-| I/O            |     0.001 |       20 |       210 |            9.52 |
+| I/O            |     0.007 |       35 |       210 |           16.67 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.185 |          |           |                 |
+| Total          |     0.191 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
 | Vccaux    |       1.800 |     0.066 |       0.048 |      0.018 |
-| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
+| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,13 +145,13 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| EggsD            |     0.088 |
+| EggsD            |     0.094 |
+|   clk10HZ        |    <0.001 |
 |   clk1HZ         |    <0.001 |
 |   clk5MHZ        |     0.086 |
 |     inst         |     0.086 |
 |   countDownTime  |    <0.001 |
 |   incrementTime  |    <0.001 |
-|     SLOW_CLK     |    <0.001 |
 |     debounce_min |    <0.001 |
 |     debounce_sec |    <0.001 |
 |   segMGMT        |    <0.001 |

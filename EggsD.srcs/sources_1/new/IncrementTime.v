@@ -33,8 +33,8 @@ module IncrementTime(
     output reg [5:0] sec
 );
 
-    wire slowpoke;
-    slow_clk SLOW_CLK(.clk(clk), .reset(reset), .enable(enable), .slow_clk(slowpoke)); //10ms slow clk
+//    wire slowpoke;
+//    slow_clk SLOW_CLK(.clk(clk), .reset(reset), .enable(enable), .slow_clk(slowpoke)); //10ms slow clk
     
     wire min_clk, sec_clk;
     debouncer debounce_min(.clk(clk), 

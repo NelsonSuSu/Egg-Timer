@@ -20,14 +20,14 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files -quiet c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
 set_property used_in_implementation false [get_files c:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
 read_verilog -library xil_defaultlib {
+  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/debouncer.v
   C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/div59.v
   C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/bcdto7segment.v
-  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/slow_clk.v
-  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/imports/new/debouncer.v
-  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/SegMgmt.v
   C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/clk_div_5M.v
-  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/CountDownTime.v
+  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/clk10hz.v
   C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/IncrementTime.v
+  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/CountDownTime.v
+  C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/SegMgmt.v
   C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/EggsD.srcs/sources_1/new/EggsD.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {

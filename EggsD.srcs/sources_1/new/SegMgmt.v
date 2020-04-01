@@ -81,7 +81,7 @@ module SegMgmt(
                     seg <= d;
                 else
                     seg <= 7'b1111111;
-                an <= 8'b1101111;
+                an <= 8'b11011111;
             end
             3'b110: begin
                 if (state == 1)

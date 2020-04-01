@@ -1,4 +1,7 @@
-Running: xsim.dir/Egg_TimerTB_behav/xsimk.exe -simmode gui -wdb Egg_TimerTB_behav.wdb -simrunnum 0 -socket 58044
+Running: xsim.dir/Egg_TimerTB_behav/xsimk.exe -simmode gui -wdb Egg_TimerTB_behav.wdb -simrunnum 0 -socket 57319
 Design successfully loaded
 Design Loading Memory Usage: 9228 KB (Peak: 9228 KB)
-Design Loading CPU Usage: 124 ms
+Design Loading CPU Usage: 93 ms
+Simulation completed
+Simulation Memory Usage: 12396 KB (Peak: 12396 KB)
+Simulation CPU Usage: 6733 ms
