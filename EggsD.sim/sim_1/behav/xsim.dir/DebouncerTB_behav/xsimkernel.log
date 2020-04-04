@@ -1,7 +1,0 @@
-Running: xsim.dir/DebouncerTB_behav/xsimk.exe -simmode gui -wdb DebouncerTB_behav.wdb -simrunnum 0 -socket 57062
-Design successfully loaded
-Design Loading Memory Usage: 8844 KB (Peak: 8844 KB)
-Design Loading CPU Usage: 93 ms
-Simulation completed
-Simulation Memory Usage: 9616 KB (Peak: 9616 KB)
-Simulation CPU Usage: 108 ms

@@ -1,6 +1,6 @@
 @echo off
 set xv_path=C:\\Xilinx\\Vivado\\2016.3\\bin
-call %xv_path%/xsim Egg_TimerTB_behav -key {Behavioral:sim_1:Functional:Egg_TimerTB} -tclbatch Egg_TimerTB.tcl -log simulate.log
+call %xv_path%/xsim Egg_TimerTB_behav -key {Behavioral:sim_1:Functional:Egg_TimerTB} -tclbatch Egg_TimerTB.tcl -view C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/Egg_TimerTB_behav.wcfg -view C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/CookTimeTB_behav.wcfg -view C:/Users/nelso/OneDrive/Documents/GitHub/Egg-Timer/CountTimeTB_behav.wcfg -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END
