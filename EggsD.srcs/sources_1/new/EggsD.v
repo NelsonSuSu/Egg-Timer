@@ -77,6 +77,7 @@ module EggsD(
                 7: led <= 9'b001111111;
                 8: led <= 9'b011111111;
                 9: led <= 9'b111111111;
+                default: led <= 9'b000000000;
             endcase
         end
     end

@@ -1,7 +1,0 @@
-Running: xsim.dir/CookTimeTB_behav/xsimk.exe -simmode gui -wdb CookTimeTB_behav.wdb -simrunnum 0 -socket 57086
-Design successfully loaded
-Design Loading Memory Usage: 8868 KB (Peak: 8868 KB)
-Design Loading CPU Usage: 93 ms
-Simulation completed
-Simulation Memory Usage: 9632 KB (Peak: 9632 KB)
-Simulation CPU Usage: 109 ms
